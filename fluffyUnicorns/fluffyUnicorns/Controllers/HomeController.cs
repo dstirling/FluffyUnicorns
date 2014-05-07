@@ -21,6 +21,12 @@ namespace fluffyUnicorns.Controllers
 
             return View();
         }
+        public ActionResult BookMarks()
+        {
+            ViewBag.Message = "Upload your exported bookmark files so you can access your favorite sites anywhere :)";
+
+            return View();
+        }
 
         public ActionResult Contact()
         {
