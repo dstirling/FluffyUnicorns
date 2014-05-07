@@ -6,3 +6,12 @@ Task List
 -Technologies
 -Scope
 -Target Audice
+
+I don't know how to deal with this table.
+Should languages have their own table to group experience with the language in one row? Or is there a way I am not thinking of?
+
+Role is where I am going to set the admin or regular user.. using default value of 0 for admin, and 1 for regular user.
+
+added projects table to keep record of existing projects
+
+Added this table to keep record of members in each project, to make sure people can only see their projects/files associated with projects. 
