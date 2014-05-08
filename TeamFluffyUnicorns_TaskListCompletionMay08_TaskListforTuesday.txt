@@ -1,0 +1,58 @@
+Tasks Completed May 08, 2014	
+Team: Fluffy Unicorns
+Members: Danielle S and Stacey M
+
+1. Database Designs
+
+Created table schema in MySQL Workbench.  There are two tables, a user table for log in and a bookmarks table that will house all information on bookmarks that users upload.
+Foreign key has been placed on userID column in bookmarks that relates to userID for log in so that users are able to only see their own bookmarks.
+Added "browser" column so that users can upload exports from different browsers.
+
+2. Dataflow Models
+- User uploading export file
+Dataflow model that goes through process of a user filling out information, title of file, description (optional), which browser it is from, and selecting the file from their computer to upload.
+Users have the option to add a description to remind themselves with a general overview of what might be found based on what browser they have uploaded from.
+
+- User selecting bookmarks based on browser
+Dataflow model demonstrates a user who is on the bookmarks page that shows all different browsers they have uploaded bookmarks from.  The user may select by browser and is brought to page that contains all the bookmarks that were in the file they had uploaded.
+
+3. Set up MVC
+Set up database on hosting server, including asp.net tables configured
+created bookmarks table
+connected database to MVC layout.
+Added pages to MVC template (bookmarks page)
+Added place holder text to each page to familiarize myself with MVC layout.
+
+Used following links to help learn where things are in MVC
+1. http://mvc4beginner.com/
+2. http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4
+3.http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/adding-a-controller
+4.http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/adding-a-view
+5.http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/adding-a-model
+6.http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/accessing-your-models-data-from-a-controller
+7.http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/adding-validation-to-the-model
+
+
+4. Timeline Revised
+- added more specific information to timeline for better idea of where project should be each day.
+
+5. Wireframes:
+-Started wireframes, Desktop wireframe for landing has been completed.  Wireframes for responsive and additional pages have not been completed due to time restraint, but will be completed by end of Tuesday.
+
+5. Styletiles:
+Designed logo, picked fonts and color scheme
+
+
+1. Begin Research on creating insert in MVC
+
+2. Finish wireframes
+
+3. Add any additional dataflow models that may be needed 
+
+4. Make all template pages ready for content and coding
+
+5. Pick a name for project
+
+
+
+
