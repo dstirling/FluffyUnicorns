@@ -1,0 +1,11 @@
+Task List for May 08, 2014
+Both:
+-Create wireframes
+-Create database designs
+-Dataflow models 
+-Discuss and create detailed timeline
+Stacey:
+-Start Styletiles
+Danielle:
+-Set up MVC(add pages needed, database connection)
+-Research and learn how to use server database with MVC to create an insert (will be completed by Tuesday end of class)
