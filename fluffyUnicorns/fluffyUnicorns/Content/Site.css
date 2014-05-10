@@ -4,12 +4,12 @@
     font-weight:400;
 }
 
-body {
+#wrapper {
     background:url('../Images/bg.jpg') bottom left no-repeat;
     border:1px solid black;
     max-height:955px;
     margin:0 auto;
-    overflow:hidden;
+    overflow:scroll;
 }
 
 #logo {
@@ -46,7 +46,6 @@ footer li {
 }
 
 footer {
-    position:fixed;
     bottom:0px;
     left:0px;
     background-color:white;
