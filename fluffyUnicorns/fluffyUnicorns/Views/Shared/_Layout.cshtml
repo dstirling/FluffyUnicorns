@@ -2,48 +2,74 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>@ViewBag.Name Cloud Marker</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="~/Content/foundation.css" rel="stylesheet" />   
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Concert+One|The+Girl+Next+Door|Patrick+Hand+SC|Londrina+Shadow' rel='stylesheet' type='text/css'>
         @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
+        
+<div id="wrapper">
+            <header>  
+                <div class="fixed">
+                <nav class="top-bar" data-topbar>
+                    <section class="top-bar-section">
+                    <ul class="right">
+                        <li>@Html.ActionLink("My Cloud Markers", "Bookmarks")</li>
+                        <li><a href="#">Stats</a></li>
+                        <li>@Html.ActionLink("About", "About")</li>
+                        <li>@Html.ActionLink("Contact", "Contact")</li>
+                    </ul>
+                    <ul class="left">
+                        <li>@Html.ActionLink("Home", "Index")</li>
+                    </ul>
                     </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                             <li>@Html.ActionLink("BookMarks", "BookMarks", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
+                </nav>
                 </div>
-            </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
-        </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
-        </footer>
 
-        @Scripts.Render("~/bundles/jquery")
+                <a href='@Url.Action("Index")'><img id="logo" src="~/Images/logo-orange.png" /></a>
+            </header>
+
+            
+
+
+            <section id="content">
+            <div class="content">
+                <div class="background">
+                        @RenderBody()
+                        <p>Test</p>
+                </div>
+            </div>
+            </section>
+
+
+            <footer>
+                <nav>
+                    <ul>
+                        <li><span>&copy; 2014 Danielle Stirling & Stacey Masson</span></li>
+                        <li>@Html.ActionLink("Help", "Help")</li>
+                        <li>@Html.ActionLink("Privacy Policy", "Privacy")</li>
+                        <li>@Html.ActionLink("Terms of Use", "Terms")</li>
+                        <li>@Html.ActionLink("Logout", "Logout")</li>
+                        <li><a href="http://www.facebook.com"><img src="~/Images/fb-bl.png" /></a></li>
+                        <li><a href="http://www.twitter.com"><img src="~/Images/twitter-bl.png" /></a></li>
+                    </ul>
+                </nav>
+            </footer>
+
+        </div>
+
+
+        
+      
+        <script src="~/Scripts/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
         @RenderSection("scripts", required: false)
     </body>
 </html>
