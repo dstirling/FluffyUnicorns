@@ -86,3 +86,4 @@ C:\xampp\htdocs\GitHub\FluffyUnicorns\fluffyUnicorns\fluffyUnicorns\bin\zh-Hans\
 C:\xampp\htdocs\GitHub\FluffyUnicorns\fluffyUnicorns\fluffyUnicorns\bin\zh-Hant\System.Spatial.resources.dll
 C:\xampp\htdocs\GitHub\FluffyUnicorns\fluffyUnicorns\fluffyUnicorns\obj\Debug\fluffyUnicorns.dll
 C:\xampp\htdocs\GitHub\FluffyUnicorns\fluffyUnicorns\fluffyUnicorns\obj\Debug\fluffyUnicorns.pdb
+C:\xampp\htdocs\GitHub\FluffyUnicorns\fluffyUnicorns\fluffyUnicorns\obj\Debug\fluffyUnicorns.csprojResolveAssemblyReference.cache
