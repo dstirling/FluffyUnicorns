@@ -14,52 +14,67 @@
     <body>
         
 <div id="wrapper">
+
             <header>  
                 @*<div class="fixed">*@
                 <nav class="top-bar" data-topbar>
+                    <ul class="title-area">
+                        <li class="name">
+                            <h1>@Html.ActionLink("Cloud Marker", "Index", "Home")</h1>
+                        </li>
+                        <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+                    </ul>
+
                     <section class="top-bar-section">
                     <ul class="right">
                         <li>@Html.ActionLink("My Cloud Markers","Index","bookmark")</li>
                         <li><a href="#">Stats</a></li>
-                        <li>@Html.ActionLink("About", "About")</li>
-                        <li>@Html.ActionLink("Contact", "Contact")</li>
-                    </ul>
-                    <ul class="left">
-                        <li>@Html.ActionLink("Home", "Index")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </ul>
                     </section>
                 </nav>
                 @*</div>*@
 
-                <a href='@Url.Action("Index")'><img id="logo" src="~/Images/logo-orange.png" /></a>
+                <a href='@Url.Action("Index", "Home")'><img id="logo" src="~/Images/logo-orange.png" /></a>
             </header>
 
             
 
-
+        <div class="row">
+            <div class="large-12 column">
             <section id="content">
-            <div class="content">
-                <div class="background">
+                <div class="bg">
+                    <div class="con">
+                        @* Content goes here *@
                         @RenderBody()
-                        <p>Test</p>
+                    </div>
                 </div>
-            </div>
+                
             </section>
+            </div>
+        </div>
 
-
+    <div class="row">
             <footer>
-                <nav>
-                    <ul>
-                        <li><span>&copy; 2014 Danielle Stirling & Stacey Masson</span></li>
-                        <li>@Html.ActionLink("Help", "Help")</li>
-                        <li>@Html.ActionLink("Privacy Policy", "Privacy")</li>
-                        <li>@Html.ActionLink("Terms of Use", "Terms")</li>
-                        <li>@Html.ActionLink("Logout", "Logout")</li>
-                        <li><a href="http://www.facebook.com"><img src="~/Images/fb-bl.png" /></a></li>
-                        <li><a href="http://www.twitter.com"><img src="~/Images/twitter-bl.png" /></a></li>
-                    </ul>
+                <nav class="footer">
+                        <div class="large-6 medium-6 small-12 columns fnav">
+                        @Html.ActionLink("Help", "Help")
+                        @Html.ActionLink("Privacy Policy", "Privacy")
+                        @Html.ActionLink("Terms of Use", "Terms")
+                        @Html.ActionLink("Logout", "Logout")
+                        </div>
+                        <div class="large-6 medium-6 small-12 columns social">
+                        <a href="http://www.facebook.com"><img src="~/Images/fb-bl.png" /></a>
+                        <a href="http://www.twitter.com"><img src="~/Images/twitter-bl.png" /></a>
+                        </div>
+                        <div class="large-12 medium-12 small-12 columns copy">
+                        <span>&copy; 2014 Danielle Stirling & Stacey Masson</span>
+                        </div>
                 </nav>
             </footer>
+        </div>
+
 
         </div>
 
