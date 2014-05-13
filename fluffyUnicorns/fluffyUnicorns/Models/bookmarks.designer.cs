@@ -84,8 +84,6 @@ namespace fluffyUnicorns.Models
 		
 		private System.Nullable<int> _userID;
 		
-		private string _username;
-		
 		private string _browserName;
 		
 		private string _title;
@@ -102,8 +100,6 @@ namespace fluffyUnicorns.Models
     partial void OnIdChanged();
     partial void OnuserIDChanging(System.Nullable<int> value);
     partial void OnuserIDChanged();
-    partial void OnusernameChanging(string value);
-    partial void OnusernameChanged();
     partial void OnbrowserNameChanging(string value);
     partial void OnbrowserNameChanged();
     partial void OntitleChanging(string value);
@@ -155,26 +151,6 @@ namespace fluffyUnicorns.Models
 					this._userID = value;
 					this.SendPropertyChanged("userID");
 					this.OnuserIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="VarChar(50)")]
-		public string username
-		{
-			get
-			{
-				return this._username;
-			}
-			set
-			{
-				if ((this._username != value))
-				{
-					this.OnusernameChanging(value);
-					this.SendPropertyChanging();
-					this._username = value;
-					this.SendPropertyChanged("username");
-					this.OnusernameChanged();
 				}
 			}
 		}

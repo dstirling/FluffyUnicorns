@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bookmarks">
   <DataContextMoniker Name="/bookmarksDataContext" />
   <nestedChildShapes>
-    <classShape Id="34965d84-2c8c-49e6-9692-f48904c79324" absoluteBounds="0.625, 0.75, 2, 2.1554996744791666">
+    <classShape Id="65f77371-65b6-4efe-be2c-9b7884906bd3" absoluteBounds="3.5, 2, 2, 1.9631982421875">
       <DataClassMoniker Name="/bookmarksDataContext/bookmark" />
       <nestedChildShapes>
-        <elementListCompartment Id="05f39613-e89d-4c68-a806-7803842ae357" absoluteBounds="0.63999999999999968, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d20f24b7-9cee-4744-b5d9-a1ddfe619cf1" absoluteBounds="3.515, 2.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

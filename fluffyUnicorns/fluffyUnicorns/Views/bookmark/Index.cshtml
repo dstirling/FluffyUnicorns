@@ -1,0 +1,18 @@
+﻿@model IEnumerable<fluffyUnicorns.Models.bookmark>
+
+@{ViewBag.Title = "Index";}
+
+<h2>Index</h2>
+@*<p>
+    @Html.ActionLink("Add New Bookmark", "Create", "bookmarks")
+</p>*@
+
+@Html.DisplayNameFor(model => model.browserName)
+<br />
+<br />
+@foreach (var item in Model)
+{
+    <br />
+    @Html.DisplayFor(ModelItem => item.browserName)
+       <br />
+}
