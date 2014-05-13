@@ -223,7 +223,9 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_filePath", DbType="VarChar(MAX)")]
-		public string filePath
+		[DisplayName("Upload your file here")]
+        [Required(ErrorMessage="must select a file")]
+        public string filePath
 		{
 			get
 			{

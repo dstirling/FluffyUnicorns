@@ -2,17 +2,20 @@
 
 @{ViewBag.Title = "Index";}
 
-<h2>Index</h2>
+<h2>Your Bookmarks</h2>
+
+  @Html.ActionLink("Add a Bookmark", "Create")
 @*<p>
     @Html.ActionLink("Add New Bookmark", "Create", "bookmarks")
 </p>*@
 
-@Html.DisplayNameFor(model => model.browserName)
+@*@Html.DisplayNameFor(model => model.browserName)*@
 <br />
 <br />
 @foreach (var item in Model)
 {
     <br />
     @Html.DisplayFor(ModelItem => item.browserName)
+     @Html.ActionLink("Delete","Delete", new {id = item.Id})
        <br />
 }

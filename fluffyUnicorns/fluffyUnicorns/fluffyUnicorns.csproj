@@ -203,6 +203,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bookmarks.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\fileUpload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -353,6 +354,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\bookmark\Index.cshtml" />
     <Content Include="Views\bookmark\Create.cshtml" />
+    <Content Include="Views\bookmark\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -363,6 +365,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bookmarkFiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
