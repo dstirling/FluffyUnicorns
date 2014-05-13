@@ -157,7 +157,7 @@ namespace fluffyUnicorns.Models
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_browserName", DbType="VarChar(50)")]
 		
-        [DisplayName("Browser")]
+        [DisplayName("Browser Name")]
         [Required(ErrorMessage="Please Enter Browser Name")]
         
         public string browserName
@@ -202,6 +202,7 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="VarChar(200)")]
+        [DisplayName("Describe or list keywords of what is located in this bookmark file")]
 		public string description
 		{
 			get
