@@ -17,7 +17,7 @@ namespace fluffyUnicorns.Controllers
             bookmarksDataContext bookObj = new bookmarksDataContext();
             //
             // GET: /bookmark/
-
+           
             public ActionResult Index()
             {
                 var marks = bookObj.bookmarks.Select(x => x);
@@ -26,37 +26,46 @@ namespace fluffyUnicorns.Controllers
 
             //making insert 
 
-            //[HttpPost]
-            //public ActionResult Create(fileUpload model)
-            //{
-            //    if (ModelState.IsValid)
-            //    {
-            //        // Use your file here
-            //        using (MemoryStream memoryStream = new MemoryStream())
-            //        {
-            //            model.File.InputStream.CopyTo(memoryStream);
+            [HttpPost]
+            public ActionResult Create(fileUpload model)
+            {
+                if (ModelState.IsValid)
+                {
+                    // Use your file here
+                    using (MemoryStream memoryStream = new MemoryStream())
+                    {
+                        model.File.InputStream.CopyTo(memoryStream);
 
-            //        }
-            //        return View();
-            //    }
-            //    else
-            //    {
-            //        return View();
-            //    }
-            //}
+                    }
+                    return View();
+                }
+                else
+                {
+                    return View();
+                }
+            }
 
             public ActionResult Create() //when user clicks on like a create thing it'll go to create page
             {
                 return View();
             }
             [HttpPost] //creating post 
+
             public ActionResult Create(bookmark marks)
+    
             {
+
                 if (ModelState.IsValid)
                 {
                     
                     try
                     {
+
+                        using (MemoryStream memoryStream = new MemoryStream())
+                        {
+                            marks.File.InputStream.CopyTo(memoryStream);
+
+                        }
 
                         bookObj.bookmarks.InsertOnSubmit(marks);
                         bookObj.SubmitChanges();

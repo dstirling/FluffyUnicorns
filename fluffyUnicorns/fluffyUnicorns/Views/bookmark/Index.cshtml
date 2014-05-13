@@ -16,6 +16,7 @@
 {
     <br />
     @Html.DisplayFor(ModelItem => item.browserName)
+      @Html.DisplayFor(ModelItem => item.filePath)
      @Html.ActionLink("Delete","Delete", new {id = item.Id})
        <br />
 }
