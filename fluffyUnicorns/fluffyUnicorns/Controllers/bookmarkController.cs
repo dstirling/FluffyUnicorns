@@ -14,8 +14,9 @@ namespace fluffyUnicorns.Controllers
 
         public class bookmarkController : Controller
         {
-            public HttpPostedFileBase File { get; set; }
+            
             bookmarksDataContext bookObj = new bookmarksDataContext();
+            public HttpPostedFileBase File { get; set; }
             //
             // GET: /bookmark/
            
