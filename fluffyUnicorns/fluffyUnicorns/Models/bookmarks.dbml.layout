@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bookmarks">
+  <DataContextMoniker Name="/bookmarksDataContext" />
+  <nestedChildShapes>
+    <classShape Id="34965d84-2c8c-49e6-9692-f48904c79324" absoluteBounds="0.625, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/bookmarksDataContext/bookmark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="05f39613-e89d-4c68-a806-7803842ae357" absoluteBounds="0.63999999999999968, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
