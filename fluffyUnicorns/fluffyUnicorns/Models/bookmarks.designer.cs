@@ -20,7 +20,7 @@ namespace fluffyUnicorns.Models
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-	
+    using System.ComponentModel.DataAnnotations;//gives acces to attribute classes to define what is required and what isn't. Regular expressions.
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="fluffyUnicorns")]
 	public partial class bookmarksDataContext : System.Data.Linq.DataContext
@@ -156,7 +156,11 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_browserName", DbType="VarChar(50)")]
-		public string browserName
+		
+        [DisplayName("Browser")]
+        [Required(ErrorMessage="Please Enter Browser Name")]
+        
+        public string browserName
 		{
 			get
 			{
@@ -176,6 +180,8 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="VarChar(50)")]
+        [DisplayName("Title")]
+        [Required(ErrorMessage="Please Enter Title For Your Bookmark")]
 		public string title
 		{
 			get
