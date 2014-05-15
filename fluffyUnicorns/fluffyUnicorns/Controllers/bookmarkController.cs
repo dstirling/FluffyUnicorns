@@ -16,8 +16,8 @@ namespace fluffyUnicorns.Controllers
         {
             
             bookmarksDataContext bookObj = new bookmarksDataContext();
-            public HttpPostedFileBase File { get; set; }
-            //
+
+            //public HttpPostedFileBase File { get; set; }
             // GET: /bookmark/
            
             public ActionResult Index()
@@ -64,11 +64,11 @@ namespace fluffyUnicorns.Controllers
                     try
                     {
 
-                        using (MemoryStream memoryStream = new MemoryStream())
-                        {
-                            marks.File.InputStream.CopyTo(memoryStream);
+                        //using (MemoryStream memoryStream = new MemoryStream())
+                        //{
+                        //    marks.File.InputStream.CopyTo(memoryStream);
 
-                        }
+                        //}
 
                         bookObj.bookmarks.InsertOnSubmit(marks);
                         bookObj.SubmitChanges();
