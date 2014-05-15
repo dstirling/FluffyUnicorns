@@ -1,7 +1,17 @@
-﻿h1, h2, h3, h4, h5, p {
+﻿p {
     color:#2f2f2f;
     font-family: 'Lato', sans-serif;
     font-weight:400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Concert One', cursive;
+    color:white;
+}
+
+a {
+    color:#ff9400;
+    font-weight:bold;
 }
 
 #wrapper {
@@ -26,7 +36,7 @@
     margin-bottom:10%;
     margin-top:3%;
     padding:10px;
-    background:url('/Images/transbgwh.png') repeat center top;
+    background:url('/Images/trans.png') repeat center top;
     border-radius:12px;
 }
 
@@ -50,6 +60,45 @@ footer {
 
 .footer a {
     margin-right:3%;
-    color:#ff9400;
-    font-weight:bold;
+}
+
+/*--------PAGES----------*/
+
+.side {
+    /*float:right;*/
+    text-align:center;
+    border:2px solid #ff9400;
+    background-color:white;
+    border-radius:12px;
+}
+
+.side li {
+    list-style:none;
+}
+
+.side h4 {
+    color:#2f2f2f;
+}
+
+input, select {
+    max-width:200px;
+    text-align:center;
+}
+
+.browser {
+    font-style:italic;
+}
+
+.browser, .filepath {
+    margin-right:8px;
+}
+
+.del a{
+    display:block;
+    background-color:white;
+    border-radius:50%;
+    height:25px;
+    width:25px;
+    padding-left:8px;
+    padding-top:5px;
 }

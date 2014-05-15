@@ -66,7 +66,7 @@ namespace fluffyUnicorns.Controllers
 
                         using (MemoryStream memoryStream = new MemoryStream())
                         {
-                            marks.File.InputStream.CopyTo(memoryStream);
+                            //marks.File.InputStream.CopyTo(memoryStream);
 
                         }
 

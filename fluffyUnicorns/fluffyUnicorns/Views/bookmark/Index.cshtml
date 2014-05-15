@@ -2,9 +2,23 @@
 
 @{ViewBag.Title = "Index";}
 
-<h2>Your Bookmarks</h2>
+<h2>My Cloud Markers</h2>
 
   @Html.ActionLink("Add a Bookmark", "Create")
+&nbsp;&nbsp;&nbsp;
+  @Html.ActionLink("Edit Bookmarks", "Edit")
+<br />
+
+<div class="large-8 medium-12 small-12 columns">
+
+    <label for="sort">Sort by: 
+<select id="sort">
+    <option>Date</option>
+    <option>Name</option>
+    <option>Category</option>
+</select>
+</label>
+
 @*<p>
     @Html.ActionLink("Add New Bookmark", "Create", "bookmarks")
 </p>*@
@@ -15,8 +29,33 @@
 @foreach (var item in Model)
 {
     <br />
-    @Html.DisplayFor(ModelItem => item.browserName)
-      @Html.DisplayFor(ModelItem => item.filePath)
-     @Html.ActionLink("Delete","Delete", new {id = item.Id})
-       <br />
+    <div class="bookmark">
+        <span class="del">@Html.ActionLink("x","Delete", new {id = item.Id})</span>
+        <span class="browser">@Html.DisplayFor(ModelItem => item.browserName)</span>
+        <span class="filepath">@Html.DisplayFor(ModelItem => item.filePath)</span>
+    </div>
+    <br />
 }
+
+</div>
+
+<div class="large-4 medium-12 small-12 columns">
+    <div class="side">
+        <h4>Categories</h4>
+
+        <ul>
+            <li><a href="#">Arts (3)</a></li>
+            <li><a href="#">Food (13)</a></li>
+            <li><a href="#">Movies (2)</a></li>
+            <li><a href="#">Science (7)</a></li>
+            <li><a href="#">Weather (5)</a></li>
+        </ul>
+        <input type="search" placeholder="Search..." />
+    </div>
+</div>
+
+
+
+
+
+
