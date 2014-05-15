@@ -1,47 +1,41 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Feedback";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+<div class="feedback">
 
-<section class="contact">
-    <header>
-        <h3>Phone</h3>
-    </header>
-    <p>
-        <span class="label">You can reach the 'corns at:</span>
-        <span>425.555.0100</span>
-    </p>
- 
-</section>
+    <h2>@ViewBag.Title</h2>
 
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span class="label">Support:</span>
-        <span><a href="#">corns@fluffy.com</a></span>
-    </p>
-    <p>
-        <span class="label">Marketing:</span>
-        <span><a href="#">theFluff@fluffy.com</a></span>
-    </p>
-    <p>
-        <span class="label">General:</span>
-        <span><a href="#">FluffyUnicorns@fluffy.com</a></span>
-    </p>
-</section>
+    <p>Fill out our feedback form below and let us know how we can improve Cloud Marker, or contact us directly at <a href="mailto:fluffyunicorns@cloudmarker.ca">fluffyunicorns@cloudmarker.ca</a></p>
+    <br />
+    
+    <form id="feedback">
+   
+    </form>
+       
+        <ul class="bxslider">
+            <li><a href="http://www.google.com" target="_blank"><img src="~/Images/cat1.jpg" title="Burrito Cat" /></a></li>
+            <li><a href="http://twitter.com" target="_blank"><img src="~/Images/cat2.jpg" title="Fuck you, cat" /></a></li>
+            <li><a href="http://wikipedia.com" target="_blank"><img src="~/Images/cat3.jpg" title="Grape loving cat" /></a></li>
+        </ul>
 
-<section class="contact">
-    <header>
-        <h3>Address</h3>
-    </header>
-    <p>
-       55 Fluffy Road<br />
-        Space, WA 98052-6399
-    </p>
-</section>
+    <script>
+
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                auto: true,
+                autoControls: true,
+                captions: true,
+                mode: 'horizontal',
+                useCSS: false,
+                infiniteLoop: true,
+                easing: 'easeOutElastic',
+                speed: 1500
+            });
+        });
+
+    </script>
+
+
+    
+</div>

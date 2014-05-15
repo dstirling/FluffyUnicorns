@@ -2,6 +2,7 @@
     color:#2f2f2f;
     font-family: 'Lato', sans-serif;
     font-weight:400;
+    font-size:18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,15 +10,16 @@ h1, h2, h3, h4, h5, h6 {
     color:white;
 }
 
-a {
+a, a:hover, a:visited {
     color:#ff9400;
     font-weight:bold;
 }
 
 #wrapper {
     background:url('../Images/bg2.jpg') bottom left no-repeat;
+    background-color:#286bee;
     background-attachment:fixed;
-    min-height:955px;
+    /*min-height:955px;*/
     border:1px solid black;
     margin:0 auto;
     overflow-x:hidden;
@@ -36,7 +38,7 @@ a {
     margin-bottom:10%;
     margin-top:3%;
     padding:10px;
-    background:url('/Images/trans.png') repeat center top;
+    /*background:url('/Images/trans.png') repeat center top;*/
     border-radius:12px;
 }
 
@@ -64,41 +66,94 @@ footer {
 
 /*--------PAGES----------*/
 
+/*Markers*/
+.addedit a, .addedit a:hover, .addedit a:visited {
+    color:white;
+    background-color:#ff9400;
+    border:1px solid white;
+    padding:8px 25px;
+    font-weight:normal;
+    font-size:smaller;
+}
+
+.addedit {
+    margin-top:25px;
+}
+
 .side {
     /*float:right;*/
     text-align:center;
     border:2px solid #ff9400;
     background-color:white;
     border-radius:12px;
+    padding:30px 0;
 }
 
 .side li {
     list-style:none;
+    margin-bottom:10px;
 }
 
 .side h4 {
     color:#2f2f2f;
+    margin-bottom:15px;
 }
 
 input, select {
     max-width:200px;
-    text-align:center;
+}
+
+#search {
+    display:inline;
 }
 
 .browser {
     font-style:italic;
 }
 
-.browser, .filepath {
+.browser, .filepath, .del {
     margin-right:8px;
 }
 
-.del a{
-    display:block;
-    background-color:white;
+.del a, .del a:hover, .del a:visited{
+    display:inline-block;
+    background-color:#ff9400;
+    border:1px solid white;
+    color:white;
     border-radius:50%;
     height:25px;
     width:25px;
-    padding-left:8px;
-    padding-top:5px;
+    padding-left:7px;
+    padding-top:3px;
 }
+
+/*Landing*/
+
+.home {
+    text-align:center;
+}
+
+.home h1{
+    color:#ff9400;
+}
+
+    .home h4, .home h3 {
+        color:#2f2f2f;
+    }
+
+.register, .register:hover, .register:visited {
+    color:white;
+    background-color:#ff9400;
+    border:1px solid white;
+    padding:8px 25px;
+    font-weight:bold;
+    font-size:x-large;
+}
+
+.login {
+    display:inline-block;
+    margin-top:35px;
+    text-decoration:underline;
+    font-size:larger;
+}
+
