@@ -20,7 +20,7 @@ a, a:hover, a:visited {
     background-color:#286bee;
     background-attachment:fixed;
     /*min-height:955px;*/
-    border:1px solid black;
+    /*border:1px solid black;*/
     margin:0 auto;
     overflow-x:hidden;
 }
