@@ -1,0 +1,45 @@
+﻿@model  IEnumerable<FileUploadAttempts.Models.fileuploadModel>
+
+@{
+    ViewBag.Title = "FileUpload";
+}
+
+@using (Html.BeginForm("FileUpload", "home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<h2>FileUpload</h2>
+<p><input type="file" name="File" id="File" /> </p>
+  <p><input type="submit" value="Upload file" /></p> 
+    }
+
+@*<div id="ShowList" title="File List">
+        <table>
+        <thead>
+            <th>
+                File ID
+            </th>
+            <th>
+                File Name
+            </th>
+            <th>
+                File Download
+            </th>
+        </thead>
+        <tbody>*@
+       @* @foreach (var rec in ViewData.Model)
+        {
+           <tr>
+            <td>*@
+                @* @Html.DisplayFor(model => model.Id)*@
+               @* @Html.DisplayFor(model => model.fileName)*@
+           @* </td>
+            <td>
+               
+            </td>
+            <td>
+               @Html.ActionLink("Download", "Filedownload", new { Id=rec.Id})        
+            </td>
+           </tr>
+        }
+        </tbody>
+        </table>
+    </div>*@
