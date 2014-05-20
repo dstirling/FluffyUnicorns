@@ -32,7 +32,7 @@
                     <section class="top-bar-section">
                     <ul class="right">
                         <li>@Html.ActionLink("My Cloud Markers","Index","bookmark")</li>
-                        <li><a href="#">Stats</a></li>
+                        <li>@Html.ActionLink("Stats", "Stats", "Home")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </ul>
@@ -55,9 +55,9 @@
             <footer>
                 <nav class="footer">
                         <div class="large-6 medium-6 small-12 columns fnav">
-                        @Html.ActionLink("Help", "Help")
-                        @Html.ActionLink("Privacy Policy", "Privacy")
-                        @Html.ActionLink("Terms of Use", "Terms")
+                        @Html.ActionLink("Help", "Help", "Home")
+                        @Html.ActionLink("Privacy", "Privacy", "Home")
+                        @Html.ActionLink("Terms", "Terms", "Home")
                         @Html.ActionLink("Logout", "Logout")
                         </div>
                         <div class="large-6 medium-6 small-12 columns social">

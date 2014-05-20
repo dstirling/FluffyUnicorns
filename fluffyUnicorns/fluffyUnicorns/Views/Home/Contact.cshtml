@@ -6,33 +6,42 @@
 
     <h2>@ViewBag.Title</h2>
 
-    <p>Fill out our feedback form below and let us know how we can improve Cloud Marker, or contact us directly at <a href="mailto:fluffyunicorns@cloudmarker.ca">fluffyunicorns@cloudmarker.ca</a></p>
+    <p>Know of a way we could improve? Find a bug? Think we're totally awesome? We want to know!</p>
+    <p>Drop us a line using the form below, or contact us directly at: <a href="mailto:fluffyunicorns@cloudmarker.ca">fluffyunicorns@cloudmarker.ca</a></p>
     <br />
     
     <form id="feedback">
-   
+        <label for="name">Name:
+            <input type="text" id="name" />
+        </label><br />
+        <label for="email">Email:
+            <input type="email" id="email" />
+        </label><br />
+        <label for="message">Message:
+            <textarea id="message" rows="8" cols="30"></textarea>
+        </label><br />
+        <input type="submit" value="Submit" class="button" />
     </form>
-       
+
+
+
+
+
+
+
+    Testing...   
+    @* Link to anchor tags in help page *@
         <ul class="bxslider">
-            <li><a href="http://www.google.com" target="_blank"><img src="~/Images/cat1.jpg" title="Burrito cat" /></a></li>
-            <li><a href="http://twitter.com" target="_blank"><img src="~/Images/cat2.jpg" title="Fuck you, cat" /></a></li>
-            <li><a href="http://wikipedia.com" target="_blank"><img src="~/Images/cat3.jpg" title="Grape loving cat" /></a></li>
-            <li><a href="http://yahoo.com" target="_blank"><img src="~/Images/cat4.gif" title="Do you know the marvellous bread cat?" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/Images/help1.png" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/Images/help2.png" /></a></li>
+            <li><a href="#" target="_blank"><img src="~/Images/help3.png" /></a></li>
         </ul>
 
     <script>
 
         $(document).ready(function () {
             $('.bxslider').bxSlider({
-                auto: true,
-                autoControls: true,
-                captions: true,
-                mode: 'horizontal',
-                useCSS: false,
-                infiniteLoop: true,
-                easing: 'easeOutElastic',
-                speed: 1500,
-                adaptiveHeight: true
+                auto: true
             });
         });
 

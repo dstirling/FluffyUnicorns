@@ -30,8 +30,21 @@ namespace fluffyUnicorns.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Contact the Fluffy Unicorns!";
+            return View();
+        }
 
+        public ActionResult Privacy()
+        {
+            return View();
+        }
+
+        public ActionResult Terms()
+        {
+            return View();
+        }
+
+        public ActionResult Help()
+        {
             return View();
         }
     }

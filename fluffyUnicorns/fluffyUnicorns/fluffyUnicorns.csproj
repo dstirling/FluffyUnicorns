@@ -274,6 +274,9 @@
     <Content Include="Images\cat2.jpg" />
     <Content Include="Images\cat3.jpg" />
     <Content Include="Images\controls.png" />
+    <Content Include="Images\help1.png" />
+    <Content Include="Images\help2.png" />
+    <Content Include="Images\help3.png" />
     <Content Include="Models\bookmarks.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>bookmarks.designer.cs</LastGenOutput>
@@ -367,6 +370,9 @@
     <Content Include="Views\bookmark\Index.cshtml" />
     <Content Include="Views\bookmark\Create.cshtml" />
     <Content Include="Views\bookmark\Delete.cshtml" />
+    <Content Include="Views\Home\Privacy.cshtml" />
+    <Content Include="Views\Home\Terms.cshtml" />
+    <Content Include="Views\Home\Help.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
