@@ -57,28 +57,22 @@ namespace fluffyUnicorns.Controllers
             public ActionResult Create(bookmark marks)
     
             {
-
                 if (ModelState.IsValid)
                 {
-                    
                     try
                     {
-
-<<<<<<< HEAD
                         using (MemoryStream memoryStream = new MemoryStream())
                         {
                             //marks.File.InputStream.CopyTo(memoryStream);
-=======
-                        //using (MemoryStream memoryStream = new MemoryStream())
-                        //{
-                        //    marks.File.InputStream.CopyTo(memoryStream);
->>>>>>> 364f2f23d3f32ad44445245a4b456bdaf0595763
+                            //using (MemoryStream memoryStream = new MemoryStream())
+                            //{
+                            //    marks.File.InputStream.CopyTo(memoryStream);
+                            //}
 
-                        //}
-
-                        bookObj.bookmarks.InsertOnSubmit(marks);
-                        bookObj.SubmitChanges();
-                        return RedirectToAction("Index"); //on successful insert it'll go to index page
+                            bookObj.bookmarks.InsertOnSubmit(marks);
+                            bookObj.SubmitChanges();
+                            return RedirectToAction("Index"); //on successful insert it'll go to index page
+                        }
                     }
                     catch
                     {
@@ -90,7 +84,7 @@ namespace fluffyUnicorns.Controllers
                     return View(); //will reshow form if error
                 }
             }
-
+            
             public ActionResult Delete(int Id)
             {
                 var bmark = bookObj.bookmarks.Single(x => x.Id == Id);

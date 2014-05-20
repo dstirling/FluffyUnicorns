@@ -37,7 +37,7 @@ a, a:hover, a:visited {
     margin-bottom:10%;
     margin-top:3%;
     padding:10px;
-    background:url('/Images/trans.png') repeat center top;
+    /*background:url('/Images/trans.png') repeat center top;*/
     border-radius:12px;
 }
 
@@ -56,7 +56,11 @@ footer {
 }
 
 .footer div {
-    margin-bottom:1.5%;
+    margin-bottom:.5%;
+}
+
+.footer div.copy {
+    margin-bottom:1%;
 }
 
 .footer a {
@@ -169,3 +173,18 @@ label {
     display:inline;
 }
 
+.help h4, .help h5, #instr {
+    text-align:center;
+}
+
+.help h5 {
+    color:#ff9400;
+}
+
+p.info {
+    background:url('/Images/trans.png') repeat center top;
+    border-radius:12px;
+    padding:10px;
+    max-width:700px;
+    margin:0 auto;
+}
