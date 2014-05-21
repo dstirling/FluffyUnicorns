@@ -7,9 +7,9 @@
     <h4>Popular Help Topics</h4>
     @* Link to anchor tags in help page *@
         <ul class="bxslider">
-            <li><a href="title4"><img src="~/Images/help1.png" /></a></li>
-            <li><a href="title2"><img src="~/Images/help2.png" /></a></li>
-            <li><a href="title7"><img src="~/Images/help3.png" /></a></li>
+            <li><a href="#title4"><img src="~/Images/help1.png" /></a></li>
+            <li><a href="#title2"><img src="~/Images/help2.png" /></a></li>
+            <li><a href="#title7"><img src="~/Images/help3.png" /></a></li>
         </ul>
 
     <script>
@@ -23,6 +23,7 @@
                 var infoID = $(this).attr('data-infoID');
                 $('#' + infoID).slideToggle();
             });
+
         });
     </script>
 
