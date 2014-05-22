@@ -12,14 +12,12 @@ namespace FileUploadAttempts.Models
     {
         public class upload
         {
-            public HttpPostedFileBase File { get; set; }
-            [Key]
-            public int Id { get; set; }
-
+            //public HttpPostedFileBase File { get; set; }
+            
             public string fileName { get; set; }
 
-      
+
             public byte fileData { get; set; }
         }
     }
-    }
+}

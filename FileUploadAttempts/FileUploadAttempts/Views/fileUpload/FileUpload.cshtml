@@ -1,4 +1,4 @@
-﻿@model  IEnumerable<FileUploadAttempts.Models.fileuploadModel>
+﻿@model  IEnumerable<FileUploadAttempts.Models.Image>
 
 @{
     ViewBag.Title = "FileUpload";
@@ -8,38 +8,15 @@
 {
 <h2>FileUpload</h2>
 <p><input type="file" name="File" id="File" /> </p>
-  <p><input type="submit" value="Upload file" /></p> 
-    }
+  <p><input type="submit" value="Upload file" /></p>@* 
+    
 
-@*<div id="ShowList" title="File List">
-        <table>
-        <thead>
-            <th>
-                File ID
-            </th>
-            <th>
-                File Name
-            </th>
-            <th>
-                File Download
-            </th>
-        </thead>
-        <tbody>*@
-       @* @foreach (var rec in ViewData.Model)
+        @foreach (var rec in ViewData.Model)
         {
-           <tr>
-            <td>*@
-                @* @Html.DisplayFor(model => model.Id)*@
-               @* @Html.DisplayFor(model => model.fileName)*@
-           @* </td>
-            <td>
-               
-            </td>
-            <td>
-               @Html.ActionLink("Download", "Filedownload", new { Id=rec.Id})        
-            </td>
-           </tr>
+         
+                @Html.DisplayFor(model => model.fileName)
+   
         }
-        </tbody>
-        </table>
-    </div>*@
+
+}*@
+}

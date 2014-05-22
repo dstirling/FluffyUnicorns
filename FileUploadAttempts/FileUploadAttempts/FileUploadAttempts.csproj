@@ -131,11 +131,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\fileController.cs" />
     <Compile Include="Controllers\fileUploadController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\fileuploadModel.cs" />
+    <Compile Include="Models\fileupModel.cs" />
     <Compile Include="Models\upload.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,6 +238,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\fileUpload\FileUpload.cshtml" />
+    <Content Include="Views\file\Index.cshtml" />
+    <Content Include="Views\file\Create.cshtml" />
+    <Content Include="Views\fileUpload\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
