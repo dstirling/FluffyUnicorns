@@ -10,14 +10,13 @@ namespace FileUploadAttempts.Models
 {
     public class fileuploadModel : uploadDataContext
     {
-        public class upload
-        {
-            //public HttpPostedFileBase File { get; set; }
+        
+            public HttpPostedFileBase File { get; set; }
             
             public string fileName { get; set; }
 
 
             public byte fileData { get; set; }
-        }
+        
     }
 }
