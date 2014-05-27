@@ -5,14 +5,16 @@
 }
 
 @using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
+   
+     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     
-        @Html.HiddenFor(model => model.Id)
+       
+    <div class="editor-label">
+         @Html.HiddenFor(model => model.Id)
         
     
-    <div class="editor-label">
             @Html.LabelFor(model => model.fileName)
         </div>
         <div class="editor-field">
@@ -20,7 +22,14 @@
           @*  @Html.ValidationMessageFor(model => model.Name)*@
     </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.fileData)
+         
+
+
+             @Html.LabelFor(model => model.fileDescription)
+    @Html.EditorFor(model => model.fileDescription)
+                @*     @Html.ValidationMessageFor(model => model.fileDescription)*@
+    @Html.LabelFor(model => model.browser)
+    @Html.EditorFor(model => model.browser)
         </div>
           <input type="submit" value="Save" />
         }

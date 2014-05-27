@@ -20,6 +20,8 @@ namespace fluffyUnicorns.Models
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="fluffyUnicorns")]
@@ -116,6 +118,8 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+
+        
 		public int Id
 		{
 			get

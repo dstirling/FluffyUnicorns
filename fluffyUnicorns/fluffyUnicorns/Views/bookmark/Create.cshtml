@@ -15,12 +15,18 @@
             @Html.LabelFor(model => model.fileName)
 
             @Html.EditorFor(model => model.fileName)
-       @*     @Html.ValidationMessageFor(model => model.Name)*@
+       @*     @Html.ValidationMessageFor(model => model.fileName)*@
+
+    @Html.LabelFor(model => model.fileDescription)
+    @Html.EditorFor(model => model.fileDescription)
+                @*     @Html.ValidationMessageFor(model => model.fileDescription)*@
+    @Html.LabelFor(model => model.browser)
+    @Html.EditorFor(model => model.browser)
+     @*     @Html.ValidationMessageFor(model => model.browser)*@   
                
+                              
     @Html.LabelFor(model => model.fileData)
-    @Html.TextBoxFor(model => model.fileData, new { type = "file"}) 
-    
-    
+    @Html.TextBoxFor(model => model.fileData, new { type = "file"})         
     <input type="submit" id="submit" value="submit" />
 }
 

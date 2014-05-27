@@ -1,4 +1,4 @@
-﻿@model IEnumerable<fluffyUnicorns.Models.Image>
+﻿@model IEnumerable<fluffyUnicorns.Models.bookmark>
 
 @{ViewBag.Title = "Index";}
 
@@ -26,9 +26,11 @@
 {
     <br />
     <div class="bookmark">
-        @*<span class="del">@Html.ActionLink("x","Delete", new {id = item.Id})</span>*@
-        <span class="browser">@Html.DisplayFor(ModelItem => item.fileData)</span>
+        <span class="del">@Html.ActionLink("x","Delete", new {Id = item.Id})</span>
+
+        <span class="browser">@Html.DisplayFor(ModelItem => item.browser)</span>
         @*<span class="filepath">@Html.DisplayFor(ModelItem => item.filePath)</span>*@
+                <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>
     </div>
     <br />
 }
