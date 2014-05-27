@@ -8,5 +8,11 @@
         <elementListCompartment Id="d20f24b7-9cee-4744-b5d9-a1ddfe619cf1" absoluteBounds="3.515, 2.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="48d37cb1-8a25-4fc6-9f79-7f0175496e85" absoluteBounds="6.125, 2.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/bookmarksDataContext/Image" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ccdf2199-1a74-4236-a31c-a9aee7ed7e32" absoluteBounds="6.1400000000000006, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

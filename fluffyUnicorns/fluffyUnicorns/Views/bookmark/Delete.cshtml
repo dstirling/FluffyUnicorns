@@ -1,4 +1,4 @@
-﻿@model fluffyUnicorns.Models.bookmark
+﻿@model fluffyUnicorns.Models.Image
 @{
     ViewBag.Title = "Delete Your Bookmarks!";
 }
@@ -13,9 +13,9 @@
         <legend>Bookmarks</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.title)
+            @Html.LabelFor(model => model.fileData)
         </div>
-        <div class="editor-field">
+        @*<div class="editor-field">
             @Html.EditorFor(model => model.title)
             @Html.ValidationMessageFor(model => model.title)
         </div>
@@ -34,7 +34,7 @@
         <div class="editor-field">
             @Html.EditorFor(model => model.description)
             @Html.ValidationMessageFor(model => model.description)
-        </div>
+        </div>*@
 
         <p>
             <input type="submit" value="Delete" />

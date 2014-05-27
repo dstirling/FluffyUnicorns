@@ -20,7 +20,7 @@ namespace fluffyUnicorns.Models
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-    using System.ComponentModel.DataAnnotations;//gives acces to attribute classes to define what is required and what isn't. Regular expressions.
+	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="fluffyUnicorns")]
 	public partial class bookmarksDataContext : System.Data.Linq.DataContext
@@ -33,6 +33,9 @@ namespace fluffyUnicorns.Models
     partial void Insertbookmark(bookmark instance);
     partial void Updatebookmark(bookmark instance);
     partial void Deletebookmark(bookmark instance);
+    partial void InsertImage(Image instance);
+    partial void UpdateImage(Image instance);
+    partial void DeleteImage(Image instance);
     #endregion
 		
 		public bookmarksDataContext() : 
@@ -70,6 +73,14 @@ namespace fluffyUnicorns.Models
 			get
 			{
 				return this.GetTable<bookmark>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Image> Images
+		{
+			get
+			{
+				return this.GetTable<Image>();
 			}
 		}
 	}
@@ -156,11 +167,7 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_browserName", DbType="VarChar(50)")]
-		
-        [DisplayName("Browser Name")]
-        [Required(ErrorMessage="Please Enter Browser Name")]
-        
-        public string browserName
+		public string browserName
 		{
 			get
 			{
@@ -180,8 +187,6 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="VarChar(50)")]
-        [DisplayName("Title")]
-        [Required(ErrorMessage="Please Enter Title For Your Bookmark")]
 		public string title
 		{
 			get
@@ -202,7 +207,6 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="VarChar(200)")]
-        [DisplayName("Describe or list keywords of what is located in this bookmark file")]
 		public string description
 		{
 			get
@@ -223,11 +227,7 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_filePath", DbType="VarChar(MAX)")]
-		[DisplayName("Upload your file here")]
-        [Required(ErrorMessage="must select a file")]
-
-        public string filePath
-
+		public string filePath
 		{
 			get
 			{
@@ -242,6 +242,116 @@ namespace fluffyUnicorns.Models
 					this._filePath = value;
 					this.SendPropertyChanged("filePath");
 					this.OnfilePathChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Images")]
+	public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _fileName;
+		
+		private string _fileData;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnfileNameChanging(string value);
+    partial void OnfileNameChanged();
+    partial void OnfileDataChanging(string value);
+    partial void OnfileDataChanged();
+    #endregion
+		
+		public Image()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileName", DbType="VarChar(50)")]
+		public string fileName
+		{
+			get
+			{
+				return this._fileName;
+			}
+			set
+			{
+				if ((this._fileName != value))
+				{
+					this.OnfileNameChanging(value);
+					this.SendPropertyChanging();
+					this._fileName = value;
+					this.SendPropertyChanged("fileName");
+					this.OnfileNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileData", DbType="VarChar(100)")]
+		public string fileData
+		{
+			get
+			{
+				return this._fileData;
+			}
+			set
+			{
+				if ((this._fileData != value))
+				{
+					this.OnfileDataChanging(value);
+					this.SendPropertyChanging();
+					this._fileData = value;
+					this.SendPropertyChanged("fileData");
+					this.OnfileDataChanged();
 				}
 			}
 		}

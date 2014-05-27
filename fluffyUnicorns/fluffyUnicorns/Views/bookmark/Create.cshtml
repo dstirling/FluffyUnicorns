@@ -1,59 +1,23 @@
-﻿@model fluffyUnicorns.Models.bookmark
+﻿@model fluffyUnicorns.Models.Image
 @{
     ViewBag.Title = "Add Your Bookmarks!";
 }
 
 <h2>Create</h2>
 
-@using (Html.BeginForm("Create", "bookmark", FormMethod.Post, new { enctype = "multipart/form-data" })) 
 
+
+        <div class="editor-label">
+           @using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
 {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-
-    <fieldset>
-        <legend>Bookmarks</legend>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.title)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.title)
-            @Html.ValidationMessageFor(model => model.title)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.browserName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.browserName)
-            @Html.ValidationMessageFor(model => model.browserName)
-        </div>
-
-                <div class="editor-label">
-            @Html.LabelFor(model => model.description)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.description)
-            @Html.ValidationMessageFor(model => model.description)
-        </div>
-       
+    @Html.LabelFor(model => model.fileData)
+    @Html.TextBoxFor(model => model.fileData, new { type = "file"}) 
     
-        @Html.LabelFor(model => model.filePath)
-         @Html.TextBoxFor(model => model.filePath, new { type = "file" })
-       @* <input type="file" id="filePath" name="filePath" />*@
-        <input type="submit" value="upload" />
-        
-@*       @if(!String.IsNullOrEmpty(ViewBag.Status))
-       {
-           <div>
-
-               @ViewBag.Status 
-           </div>
-       }*@
-    </fieldset>
+    
+    <input type="submit" id="submit" value="submit" />
 }
 
+            </div>
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>

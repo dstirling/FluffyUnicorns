@@ -10,4 +10,11 @@
       <Column Name="filePath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Images" Member="Images">
+    <Type Name="Image">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fileName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fileData" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

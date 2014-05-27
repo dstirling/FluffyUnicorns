@@ -33,3 +33,4 @@ C:\xampp\htdocs\GitHub\FluffyUnicorns\FileUploadAttempts\FileUploadAttempts\bin\
 C:\xampp\htdocs\GitHub\FluffyUnicorns\FileUploadAttempts\FileUploadAttempts\bin\System.Web.WebPages.Razor.xml
 C:\xampp\htdocs\GitHub\FluffyUnicorns\FileUploadAttempts\FileUploadAttempts\obj\Debug\FileUploadAttempts.dll
 C:\xampp\htdocs\GitHub\FluffyUnicorns\FileUploadAttempts\FileUploadAttempts\obj\Debug\FileUploadAttempts.pdb
+C:\xampp\htdocs\GitHub\FluffyUnicorns\FileUploadAttempts\FileUploadAttempts\obj\Debug\FileUploadAttempts.csprojResolveAssemblyReference.cache

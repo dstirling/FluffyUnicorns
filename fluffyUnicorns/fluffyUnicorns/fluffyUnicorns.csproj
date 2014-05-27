@@ -203,7 +203,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bookmarks.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Models\fileUpload.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

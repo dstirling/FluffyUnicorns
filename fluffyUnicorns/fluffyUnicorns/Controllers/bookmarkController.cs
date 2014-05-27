@@ -22,83 +22,48 @@ namespace fluffyUnicorns.Controllers
            
             public ActionResult Index()
             {
-                var marks = bookObj.bookmarks.Select(x => x);
+                var marks = bookObj.Images.Select(x => x);
                 return View(marks);//must pass parameter to view in order to display information
             }
 
-            //making insert 
-
-            //[HttpPost]
-            //public ActionResult Create(fileUpload model)
-            //{
-            //    if (ModelState.IsValid)
-            //    {
-            //        // Use your file here
-            //        using (MemoryStream memoryStream = new MemoryStream())
-            //        {
-            //            model.File.InputStream.CopyTo(memoryStream);
-
-            //        }
-            //        return View();
-            //    }
-            //    else
-            //    {
-            //        return View();
-            //    }
-            //}
-
-            public ActionResult Create() //when user clicks on like a create thing it'll go to create page
+            public ActionResult Create()
             {
+                return View();
+            }
+            [HttpPost]
+            public ActionResult Create(Image upload, HttpPostedFileBase fileData)
+            {
+
+                if (fileData != null && fileData.ContentLength > 0)
+                {
+                    string file = fileData.FileName;
+                    upload.fileData = file;
+                    string filepath = Path.Combine(Server.MapPath("~/bookmarkFiles"), file);
+                    fileData.SaveAs(filepath);
+                }
+
+                bookObj.Images.InsertOnSubmit(upload);
+                bookObj.SubmitChanges();
 
                 return View();
             }
-            [HttpPost] //creating post 
 
-            public ActionResult Create(bookmark marks)
-    
-            {
-                if (ModelState.IsValid)
-                {
-                    try
-                    {
-                        using (MemoryStream memoryStream = new MemoryStream())
-                        {
-                            //marks.File.InputStream.CopyTo(memoryStream);
-                            //using (MemoryStream memoryStream = new MemoryStream())
-                            //{
-                            //    marks.File.InputStream.CopyTo(memoryStream);
-                            //}
-
-                            bookObj.bookmarks.InsertOnSubmit(marks);
-                            bookObj.SubmitChanges();
-                            return RedirectToAction("Index"); //on successful insert it'll go to index page
-                        }
-                    }
-                    catch
-                    {
-                        return View(); //will reshow form
-                    }
-                }
-                else
-                {
-                    return View(); //will reshow form if error
-                }
-            }
+      
             
             public ActionResult Delete(int Id)
             {
-                var bmark = bookObj.bookmarks.Single(x => x.Id == Id);
+                var bmark = bookObj.Images.Single(x => x.Id == Id);
                 return View(bmark);
 
             }
 
             [HttpPost]
-            public ActionResult Delete(int Id, bookmark bmark)
+            public ActionResult Delete(int Id, Image bmark)
             {
                 try
                 {
-                    var marks = bookObj.bookmarks.Single(x => x.Id == Id);
-                    bookObj.bookmarks.DeleteOnSubmit(marks);
+                    var marks = bookObj.Images.Single(x => x.Id == Id);
+                    bookObj.Images.DeleteOnSubmit(marks);
                     bookObj.SubmitChanges();
                     return RedirectToAction("Index");
                 }
