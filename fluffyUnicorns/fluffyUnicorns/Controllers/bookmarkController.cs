@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Net.Mime;
 
 using System.IO; //needed to use memory stream
 
@@ -100,6 +101,9 @@ namespace fluffyUnicorns.Controllers
                     return View(bmark);
                 }
             }
+            protected internal virtual FilePathResult File(string fileName, string contentType,  string fileData);
+            }
         }
-    }
+       
+    
 
