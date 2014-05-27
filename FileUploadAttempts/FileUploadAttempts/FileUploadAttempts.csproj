@@ -133,6 +133,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\fileController.cs" />
     <Compile Include="Controllers\fileUploadController.cs" />
+    <Compile Include="Controllers\newController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -241,9 +242,12 @@
     <Content Include="Views\file\Index.cshtml" />
     <Content Include="Views\file\Create.cshtml" />
     <Content Include="Views\fileUpload\Index.cshtml" />
+    <Content Include="Views\new\fileUploader.cshtml" />
+    <Content Include="Views\new\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Folder\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

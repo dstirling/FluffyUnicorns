@@ -1,0 +1,18 @@
+﻿@model FileUploadAttempts.Models.Image
+
+
+
+@{
+    ViewBag.Title = "fileUploader";
+}
+
+<h2>fileUploader</h2>
+
+@using (Html.BeginForm("fileUploader","new", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    @Html.LabelFor(model => model.fileData)
+    @Html.TextBoxFor(model => model.fileData, new { type = "file"}) 
+    
+    
+    <input type="submit" id="submit" value="submit" />
+}

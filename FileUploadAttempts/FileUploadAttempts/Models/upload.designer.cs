@@ -20,6 +20,8 @@ namespace FileUploadAttempts.Models
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
+    using System.ComponentModel.DataAnnotations;
+    using System.Web;
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="fluffyUnicorns")]
@@ -84,7 +86,7 @@ namespace FileUploadAttempts.Models
 		
 		private string _fileName;
 		
-		private System.Data.Linq.Binary _fileData;
+		private string _fileData;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -94,7 +96,7 @@ namespace FileUploadAttempts.Models
     partial void OnIdChanged();
     partial void OnfileNameChanging(string value);
     partial void OnfileNameChanged();
-    partial void OnfileDataChanging(System.Data.Linq.Binary value);
+    partial void OnfileDataChanging(string value);
     partial void OnfileDataChanged();
     #endregion
 		
@@ -143,8 +145,11 @@ namespace FileUploadAttempts.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileData", DbType="Image", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary fileData
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileData", DbType="VarChar(100)")]
+		
+        [DataType(DataType.ImageUrl)]
+        
+        public string fileData
 		{
 			get
 			{
