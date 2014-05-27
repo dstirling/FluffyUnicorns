@@ -22,7 +22,7 @@ namespace fluffyUnicorns.Controllers
            
             public ActionResult Index()
             {
-                var marks = bookObj.Images.Select(x => x);
+                var marks = bookObj.bookmarks.Select(x => x);
                 return View(marks);//must pass parameter to view in order to display information
             }
 
@@ -31,7 +31,7 @@ namespace fluffyUnicorns.Controllers
                 return View();
             }
             [HttpPost]
-            public ActionResult Create(Image upload, HttpPostedFileBase fileData)
+            public ActionResult Create(bookmark upload, HttpPostedFileBase fileData)
             {
 
                 if (fileData != null && fileData.ContentLength > 0)
@@ -42,7 +42,7 @@ namespace fluffyUnicorns.Controllers
                     fileData.SaveAs(filepath);
                 }
 
-                bookObj.Images.InsertOnSubmit(upload);
+                bookObj.bookmarks.InsertOnSubmit(upload);
                 bookObj.SubmitChanges();
 
                 return View();
@@ -50,17 +50,17 @@ namespace fluffyUnicorns.Controllers
 
             public ActionResult Edit(int Id)
             {
-                var book = bookObj.Images.Single(x => x.Id == Id);
+                var book = bookObj.bookmarks.Single(x => x.Id == Id);
                 return View(book);
             }
             [HttpPost]
-            public ActionResult Edit(int Id, Image book)
+            public ActionResult Edit(int Id, bookmark book)
             {
                 if (ModelState.IsValid)
                 {
                     try
                     {
-                        var bookmark = bookObj.Images.Single(x => x.Id == Id);
+                        var bookmark = bookObj.bookmarks.Single(x => x.Id == Id);
                         UpdateModel(book);
                         bookObj.SubmitChanges();
                         return RedirectToAction("Index");
@@ -79,18 +79,18 @@ namespace fluffyUnicorns.Controllers
             
             public ActionResult Delete(int Id)
             {
-                var bmark = bookObj.Images.Single(x => x.Id == Id);
+                var bmark = bookObj.bookmarks.Single(x => x.Id == Id);
                 return View(bmark);
 
             }
 
             [HttpPost]
-            public ActionResult Delete(int Id, Image bmark)
+            public ActionResult Delete(int Id, bookmark bmark)
             {
                 try
                 {
-                    var marks = bookObj.Images.Single(x => x.Id == Id);
-                    bookObj.Images.DeleteOnSubmit(marks);
+                    var marks = bookObj.bookmarks.Single(x => x.Id == Id);
+                    bookObj.bookmarks.DeleteOnSubmit(marks);
                     bookObj.SubmitChanges();
                     return RedirectToAction("Index");
                 }

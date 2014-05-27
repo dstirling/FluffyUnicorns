@@ -3,18 +3,11 @@
   <Table Name="dbo.bookmarks" Member="bookmarks">
     <Type Name="bookmark">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="userID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="browserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="description" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="filePath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Images" Member="Images">
-    <Type Name="Image">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="fileName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="fileData" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="fileDescription" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="browser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

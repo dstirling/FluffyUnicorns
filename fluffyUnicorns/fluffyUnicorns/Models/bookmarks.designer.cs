@@ -33,9 +33,6 @@ namespace fluffyUnicorns.Models
     partial void Insertbookmark(bookmark instance);
     partial void Updatebookmark(bookmark instance);
     partial void Deletebookmark(bookmark instance);
-    partial void InsertImage(Image instance);
-    partial void UpdateImage(Image instance);
-    partial void DeleteImage(Image instance);
     #endregion
 		
 		public bookmarksDataContext() : 
@@ -75,14 +72,6 @@ namespace fluffyUnicorns.Models
 				return this.GetTable<bookmark>();
 			}
 		}
-		
-		public System.Data.Linq.Table<Image> Images
-		{
-			get
-			{
-				return this.GetTable<Image>();
-			}
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.bookmarks")]
@@ -93,191 +82,15 @@ namespace fluffyUnicorns.Models
 		
 		private int _Id;
 		
-		private System.Nullable<int> _userID;
-		
-		private string _browserName;
-		
-		private string _title;
-		
-		private string _description;
-		
-		private string _filePath;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnuserIDChanging(System.Nullable<int> value);
-    partial void OnuserIDChanged();
-    partial void OnbrowserNameChanging(string value);
-    partial void OnbrowserNameChanged();
-    partial void OntitleChanging(string value);
-    partial void OntitleChanged();
-    partial void OndescriptionChanging(string value);
-    partial void OndescriptionChanged();
-    partial void OnfilePathChanging(string value);
-    partial void OnfilePathChanged();
-    #endregion
-		
-		public bookmark()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userID", DbType="Int")]
-		public System.Nullable<int> userID
-		{
-			get
-			{
-				return this._userID;
-			}
-			set
-			{
-				if ((this._userID != value))
-				{
-					this.OnuserIDChanging(value);
-					this.SendPropertyChanging();
-					this._userID = value;
-					this.SendPropertyChanged("userID");
-					this.OnuserIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_browserName", DbType="VarChar(50)")]
-		public string browserName
-		{
-			get
-			{
-				return this._browserName;
-			}
-			set
-			{
-				if ((this._browserName != value))
-				{
-					this.OnbrowserNameChanging(value);
-					this.SendPropertyChanging();
-					this._browserName = value;
-					this.SendPropertyChanged("browserName");
-					this.OnbrowserNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="VarChar(50)")]
-		public string title
-		{
-			get
-			{
-				return this._title;
-			}
-			set
-			{
-				if ((this._title != value))
-				{
-					this.OntitleChanging(value);
-					this.SendPropertyChanging();
-					this._title = value;
-					this.SendPropertyChanged("title");
-					this.OntitleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="VarChar(200)")]
-		public string description
-		{
-			get
-			{
-				return this._description;
-			}
-			set
-			{
-				if ((this._description != value))
-				{
-					this.OndescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._description = value;
-					this.SendPropertyChanged("description");
-					this.OndescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_filePath", DbType="VarChar(MAX)")]
-		public string filePath
-		{
-			get
-			{
-				return this._filePath;
-			}
-			set
-			{
-				if ((this._filePath != value))
-				{
-					this.OnfilePathChanging(value);
-					this.SendPropertyChanging();
-					this._filePath = value;
-					this.SendPropertyChanged("filePath");
-					this.OnfilePathChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Images")]
-	public partial class Image : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
 		private string _fileName;
 		
 		private string _fileData;
+		
+		private string _fileDescription;
+		
+		private string _browser;
+		
+		private System.Nullable<int> _userID;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -289,9 +102,15 @@ namespace fluffyUnicorns.Models
     partial void OnfileNameChanged();
     partial void OnfileDataChanging(string value);
     partial void OnfileDataChanged();
+    partial void OnfileDescriptionChanging(string value);
+    partial void OnfileDescriptionChanged();
+    partial void OnbrowserChanging(string value);
+    partial void OnbrowserChanged();
+    partial void OnuserIDChanging(System.Nullable<int> value);
+    partial void OnuserIDChanged();
     #endregion
 		
-		public Image()
+		public bookmark()
 		{
 			OnCreated();
 		}
@@ -352,6 +171,66 @@ namespace fluffyUnicorns.Models
 					this._fileData = value;
 					this.SendPropertyChanged("fileData");
 					this.OnfileDataChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileDescription", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string fileDescription
+		{
+			get
+			{
+				return this._fileDescription;
+			}
+			set
+			{
+				if ((this._fileDescription != value))
+				{
+					this.OnfileDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._fileDescription = value;
+					this.SendPropertyChanged("fileDescription");
+					this.OnfileDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_browser", DbType="VarChar(50)")]
+		public string browser
+		{
+			get
+			{
+				return this._browser;
+			}
+			set
+			{
+				if ((this._browser != value))
+				{
+					this.OnbrowserChanging(value);
+					this.SendPropertyChanging();
+					this._browser = value;
+					this.SendPropertyChanged("browser");
+					this.OnbrowserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userID", DbType="Int")]
+		public System.Nullable<int> userID
+		{
+			get
+			{
+				return this._userID;
+			}
+			set
+			{
+				if ((this._userID != value))
+				{
+					this.OnuserIDChanging(value);
+					this.SendPropertyChanging();
+					this._userID = value;
+					this.SendPropertyChanged("userID");
+					this.OnuserIDChanged();
 				}
 			}
 		}

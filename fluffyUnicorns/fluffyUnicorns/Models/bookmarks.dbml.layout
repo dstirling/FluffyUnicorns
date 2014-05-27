@@ -2,16 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bookmarks">
   <DataContextMoniker Name="/bookmarksDataContext" />
   <nestedChildShapes>
-    <classShape Id="65f77371-65b6-4efe-be2c-9b7884906bd3" absoluteBounds="3.5, 2, 2, 1.9631982421875">
+    <classShape Id="fa4b07e8-32b2-4c2e-bcf6-0620cba726c7" absoluteBounds="4.125, 3.75, 2, 1.9631982421875">
       <DataClassMoniker Name="/bookmarksDataContext/bookmark" />
       <nestedChildShapes>
-        <elementListCompartment Id="d20f24b7-9cee-4744-b5d9-a1ddfe619cf1" absoluteBounds="3.515, 2.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="61ef57cc-ebe3-4749-86df-344ddf1b9b6d" absoluteBounds="7.5, 2.625, 2, 1.3862939453125">
-      <DataClassMoniker Name="/bookmarksDataContext/Image" />
-      <nestedChildShapes>
-        <elementListCompartment Id="c3ed1ea3-35de-4f45-aca9-b8b95c5e59c5" absoluteBounds="7.515, 3.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="122f7472-f439-4262-8d71-e6673ea43dc4" absoluteBounds="4.14, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
