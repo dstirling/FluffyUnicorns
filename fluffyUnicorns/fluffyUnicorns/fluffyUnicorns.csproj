@@ -372,6 +372,7 @@
     <Content Include="Views\Home\Privacy.cshtml" />
     <Content Include="Views\Home\Terms.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
+    <Content Include="Views\bookmark\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

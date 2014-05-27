@@ -1,0 +1,34 @@
+﻿@model fluffyUnicorns.Models.Image
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    
+        @Html.HiddenFor(model => model.Id)
+        
+    
+    <div class="editor-label">
+            @Html.LabelFor(model => model.fileName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileName)
+          @*  @Html.ValidationMessageFor(model => model.Name)*@
+    </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fileData)
+        </div>
+          <input type="submit" value="Save" />
+        }
+
+        <div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

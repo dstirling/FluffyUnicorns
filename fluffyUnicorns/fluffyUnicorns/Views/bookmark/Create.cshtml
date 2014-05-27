@@ -10,6 +10,13 @@
         <div class="editor-label">
            @using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
 {
+               
+        
+            @Html.LabelFor(model => model.fileName)
+
+            @Html.EditorFor(model => model.fileName)
+       @*     @Html.ValidationMessageFor(model => model.Name)*@
+               
     @Html.LabelFor(model => model.fileData)
     @Html.TextBoxFor(model => model.fileData, new { type = "file"}) 
     

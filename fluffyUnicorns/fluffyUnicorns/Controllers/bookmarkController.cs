@@ -48,7 +48,34 @@ namespace fluffyUnicorns.Controllers
                 return View();
             }
 
-      
+            public ActionResult Edit(int Id)
+            {
+                var book = bookObj.Images.Single(x => x.Id == Id);
+                return View(book);
+            }
+            [HttpPost]
+            public ActionResult Edit(int Id, Image book)
+            {
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        var bookmark = bookObj.Images.Single(x => x.Id == Id);
+                        UpdateModel(book);
+                        bookObj.SubmitChanges();
+                        return RedirectToAction("Index");
+                    }
+                    catch
+                    {
+                        return View(book);
+                    }
+
+                }
+                else
+                {
+                    return View(book);
+                }
+            }
             
             public ActionResult Delete(int Id)
             {
