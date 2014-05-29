@@ -24,5 +24,6 @@ namespace fluffyUnicorns
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
         }
+
     }
 }
