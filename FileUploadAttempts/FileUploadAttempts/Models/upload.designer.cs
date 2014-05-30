@@ -20,8 +20,6 @@ namespace FileUploadAttempts.Models
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-    using System.ComponentModel.DataAnnotations;
-    using System.Web;
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="fluffyUnicorns")]
@@ -73,6 +71,20 @@ namespace FileUploadAttempts.Models
 			{
 				return this.GetTable<Image>();
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insertFile")]
+		public int insertFile([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string fileData, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Text")] string fileDescription, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string browser, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> userID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fileName, fileData, fileDescription, browser, userID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insertFile1")]
+		public int insertFile1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string fileData)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fileName, fileData);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -146,10 +158,7 @@ namespace FileUploadAttempts.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileData", DbType="VarChar(100)")]
-		
-        [DataType(DataType.ImageUrl)]
-        
-        public string fileData
+		public string fileData
 		{
 			get
 			{

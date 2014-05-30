@@ -7,4 +7,17 @@
       <Column Name="fileData" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.insertFile" Method="insertFile">
+    <Parameter Name="fileName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fileData" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fileDescription" Type="System.String" DbType="Text" />
+    <Parameter Name="browser" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="userID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertFile1" Method="insertFile1">
+    <Parameter Name="fileName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="fileData" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

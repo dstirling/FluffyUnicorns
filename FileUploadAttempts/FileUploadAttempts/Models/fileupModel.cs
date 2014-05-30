@@ -9,6 +9,6 @@ namespace FileUploadAttempts.Models
     {
         public byte[] fileData { get; set; }
 
-        //public HttpPostedFileBase File { get; set; }
+        public HttpPostedFileBase File { get; set; }
     }
 }
