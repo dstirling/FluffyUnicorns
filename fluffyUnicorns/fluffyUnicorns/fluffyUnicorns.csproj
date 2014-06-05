@@ -384,6 +384,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bookmarkFiles\" />
+    <Folder Include="files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

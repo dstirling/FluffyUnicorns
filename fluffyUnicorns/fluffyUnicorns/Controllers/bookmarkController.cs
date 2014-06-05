@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO;
+using System.Text;
 
 
 using System.IO; //needed to use memory stream
@@ -23,6 +25,8 @@ namespace fluffyUnicorns.Controllers
            
             public ActionResult Index()
             {
+
+
                 var marks = bookObj.bookmarks.Select(x => x);
 
                 return View(marks);//must pass parameter to view in order to display information
@@ -41,7 +45,7 @@ namespace fluffyUnicorns.Controllers
                 {
                     string file = fileData.FileName;
                     upload.fileData = file;
-                    string filepath = Path.Combine(Server.MapPath("~/bookmarkFiles"), file);
+                    string filepath = Path.Combine(Server.MapPath("~/files"), file);
                     fileData.SaveAs(filepath);
                 }
                 bookObj.bookmarks.InsertOnSubmit(upload);
@@ -65,6 +69,7 @@ namespace fluffyUnicorns.Controllers
                         var bookmark = bookObj.bookmarks.Single(x => x.Id == Id);
                         UpdateModel(book);
                         bookObj.SubmitChanges();
+                        ViewBag.result = "successfully inserted";
                         return RedirectToAction("Index");
                     }
                     catch

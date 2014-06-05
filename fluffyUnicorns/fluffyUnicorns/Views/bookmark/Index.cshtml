@@ -20,7 +20,18 @@
     <option>Category</option>
 </select>
 </label>
+  
+@*    @{ 
+        var dataFile = Server.MapPath("~/files/chromr.html");
+Array userData = File.ReadAllLines(dataFile);
+}
 
+    @foreach (string dataLine in userData) 
+{
+  foreach (string dataItem in dataLine.Split(',')) 
+  {@dataItem <text>&nbsp;</text>}
+  <br />
+}*@
 <br />
 @foreach (var item in Model)
 {
@@ -31,6 +42,7 @@
         <span class="browser">@Html.DisplayFor(ModelItem => item.browser)</span>
         
                 <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>
+
     </div>
     <br />
 }
