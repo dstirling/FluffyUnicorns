@@ -6,20 +6,20 @@
 <div class="addedit">
     @Html.ActionLink("Add a Bookmark", "Create")
     &nbsp;&nbsp;&nbsp;
-    @Html.ActionLink("Edit Bookmarks", "Edit")
+    @*@Html.ActionLink("Edit Bookmarks", "Edit")*@
 </div>
 <br />
 <br />
 
 <div class="large-8 medium-12 small-12 columns">
 
-    <label for="sort">Sort bookmarks by: 
-<select id="sort">
-    <option>Date</option>
-    <option>Name</option>
-    <option>Category</option>
-</select>
-</label>
+    <label for="sort">Sort bookmarks by: &nbsp;&nbsp;
+    <select id="sort">
+        <option>Date</option>
+        <option>Name</option>
+        <option>Category</option>
+    </select>
+    </label>
   
 @*    @{ 
         var dataFile = Server.MapPath("~/files/chromr.html");
@@ -39,9 +39,11 @@ Array userData = File.ReadAllLines(dataFile);
     <div class="bookmark">
         <span class="del">@Html.ActionLink("x","Delete", new {Id = item.Id})</span>
 
-        <span class="browser">@Html.DisplayFor(ModelItem => item.browser)</span>
-        
-                <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>
+        <a href="@Html.DisplayFor(ModelItem => item.url)">@Html.DisplayFor(ModelItem => item.fileName)</a>
+            
+        <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>
+
+
 
     </div>
     <br />

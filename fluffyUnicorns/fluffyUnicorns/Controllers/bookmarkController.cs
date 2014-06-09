@@ -50,6 +50,7 @@ namespace fluffyUnicorns.Controllers
                 }
                 bookObj.bookmarks.InsertOnSubmit(upload);
                 bookObj.SubmitChanges();
+                ViewBag.result = "Success";
 
                 return View();
             }
@@ -59,6 +60,7 @@ namespace fluffyUnicorns.Controllers
                 var book = bookObj.bookmarks.Single(x => x.Id == Id);
                 return View(book);
             }
+
             [HttpPost]
             public ActionResult Edit(int Id, bookmark book)
             {
@@ -69,7 +71,7 @@ namespace fluffyUnicorns.Controllers
                         var bookmark = bookObj.bookmarks.Single(x => x.Id == Id);
                         UpdateModel(book);
                         bookObj.SubmitChanges();
-                        ViewBag.result = "successfully inserted";
+                        ViewBag.result = "Success";
                         return RedirectToAction("Index");
                     }
                     catch
