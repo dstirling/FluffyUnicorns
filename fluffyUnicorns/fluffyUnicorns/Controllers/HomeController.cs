@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using fluffyUnicorns.Models;
+using System.Web.Security;
 
 namespace fluffyUnicorns.Controllers
 {
@@ -72,6 +73,13 @@ namespace fluffyUnicorns.Controllers
         public ActionResult Help()
         {
             return View();
+        }
+
+        [Authorize]
+        public RedirectResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return this.Redirect("/");
         }
     }
 }
