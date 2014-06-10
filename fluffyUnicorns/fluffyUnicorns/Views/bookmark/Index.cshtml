@@ -43,8 +43,8 @@ Array userData = File.ReadAllLines(dataFile);
             
         <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>
 
-
-
+        <a href="~/file/@item.fileData">Read files?</a>
+ 
     </div>
     <br />
 }
