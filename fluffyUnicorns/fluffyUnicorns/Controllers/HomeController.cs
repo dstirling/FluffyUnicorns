@@ -32,32 +32,32 @@ namespace fluffyUnicorns.Controllers
             return View();
         }
          //[Authorize]
-        //public ActionResult Contact()
-        //{
-        //    return View();
-        //}
+         public ActionResult Contact()
+         {
+             return View();
+         }
 
-        //[HttpPost]
-        //public ActionResult Contact(contact con)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            objCon.contacts.InsertOnSubmit(con);
-        //            objCon.SubmitChanges();
-        //            return RedirectToAction("Contact");
-        //        }
-        //        catch
-        //        {
-        //            return View();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        return View();
-        //    }
-        //}
+         [HttpPost]
+         public ActionResult Contact(contact con)
+         {
+             if (ModelState.IsValid)
+             {
+                 try
+                 {
+                     objCon.contacts.InsertOnSubmit(con);
+                     objCon.SubmitChanges();
+                     return RedirectToAction("Contact");
+                 }
+                 catch
+                 {
+                     return View();
+                 }
+             }
+             else
+             {
+                 return View();
+             }
+         }
          [Authorize]
         public ActionResult Privacy()
         {
