@@ -4,19 +4,24 @@
 }
 
 <h2>Delete</h2>
-<h3>Are you sure you want to delete this?</h3>
+<p>Are you sure you want to delete this bookmark?</p>
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Bookmarks</legend>
 
-        <div class="editor-label">
-              @Html.HiddenFor(model => model.Id)
-            @Html.LabelFor(model => model.fileName)
-        </div>
-        @*<div class="editor-field">
+            @Html.HiddenFor(model => model.Id)
+            <h3 class="delete">@Html.ValueFor(Model => Model.fileName)
+            &nbsp;&nbsp;&nbsp;
+            @Html.ValueFor(Model => Model.url)</h3>
+            <br />
+            <br />
+            <input type="submit" value="Delete" class="button" />
+
+}
+
+
+    @*<div class="editor-field">
             @Html.EditorFor(model => model.title)
             @Html.ValidationMessageFor(model => model.title)
         </div>
@@ -37,15 +42,12 @@
             @Html.ValidationMessageFor(model => model.description)
         </div>*@
 
-        <p>
-            <input type="submit" value="Delete" />
-        </p>
-    </fieldset>
-}
 
-<div>
+
+
+
     @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

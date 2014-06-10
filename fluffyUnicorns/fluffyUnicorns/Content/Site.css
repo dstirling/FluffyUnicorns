@@ -5,6 +5,10 @@
     font-size:18px;
 }
 
+ul {
+    margin-left:0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Concert One', sans-serif;
     color:white;
@@ -130,6 +134,16 @@ input, select {
     padding-top:3px;
 }
 
+.edit, .helpb {
+    margin-left:25px;
+    font-size:smaller;
+}
+
+.delete {
+    color:#ff9400;
+    font-family:Lato, sans-serif;
+}
+
 /*Landing*/
 
 .home {
@@ -173,11 +187,11 @@ label {
     display:inline;
 }
 
-.help h4, .help h5, #instr {
+.help h3, .help h4, #instr {
     text-align:center;
 }
 
-.help h5 {
+.help h4 {
     color:#ff9400;
 }
 

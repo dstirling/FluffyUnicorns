@@ -1,39 +1,61 @@
 ﻿@model fluffyUnicorns.Models.bookmark
+
 @{
     ViewBag.Title = "Add Your Bookmarks!";
 }
 
 <h2>Create</h2>
 
-
-<span style="color:red">@ViewBag.result</span>
-        <div class="editor-label">
-           @using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
-{
+<div class="row">
+<div class="large-6 medium-12 small-12 columns">
+    <p>Add a new Bookmark here.</p>
+    <span style="color:red">@ViewBag.result</span>
+        
+    @using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
                
         
-            @Html.LabelFor(model => model.fileName)
+        @Html.LabelFor(model => model.fileName, "Title")
+        @Html.EditorFor(model => model.fileName)
+        @*@Html.ValidationMessageFor(model => model.fileName, "*Required")*@
 
-            @Html.EditorFor(model => model.fileName)
-       @*     @Html.ValidationMessageFor(model => model.fileName)*@
-
-    @Html.LabelFor(model => model.fileDescription)
-    @Html.EditorFor(model => model.fileDescription)
-                @*     @Html.ValidationMessageFor(model => model.fileDescription)*@
-    @Html.LabelFor(model => model.browser)
-    @Html.EditorFor(model => model.browser)
-     @*     @Html.ValidationMessageFor(model => model.browser)*@   
+        @*REDUNDANT?*@
+        @Html.LabelFor(model => model.fileDescription, "Description")
+        @Html.EditorFor(model => model.fileDescription)
+        @*@Html.ValidationMessageFor(model => model.fileDescription, "*Required")*@
                
-                              
-    @Html.LabelFor(model => model.fileData)
-    @Html.TextBoxFor(model => model.fileData, new { type = "file"})         
-    <input type="submit" id="submit" value="submit" />
-}
-
-            </div>
-<div>
-    @Html.ActionLink("Back to List", "Index")
+        @Html.LabelFor(model => model.url, "URL")
+        @Html.EditorFor(model => model.url)
+        @*@Html.ValidationMessageFor(model =>model.url, "*Required")*@
+               
+        @*REDUNDANT?*@
+        @Html.LabelFor(model => model.browser, "Browser")
+        @Html.EditorFor(model => model.browser)
+        @*@Html.ValidationMessageFor(model => model.browser, "*Required")*@         
+        <br />
+        <br />
+        <input type="submit" value="Submit" class="button" />
+        <a class="helpb" href="@Url.Action("Help", "Home")">Help</a>
+    }
 </div>
+
+<div class="large-6 medium-12 small-12 columns">
+    <p>Import bookmarks from your browser here.</p>
+    @*NEEDS TO BE FIXED*@
+    @using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    {
+        @Html.LabelFor(model => model.fileData, "Upload Exported HTML Bookmarks")
+        @Html.TextBoxFor(model => model.fileData, new { type = "file"})
+        <br />
+        <br />
+        <input type="submit" value="Upload" class="button" />
+        <a class="helpb" href="@Url.Action("Help", "Home")">Help</a>
+    }
+</div>
+</div>
+
+@Html.ActionLink("Back to List", "Index")
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
