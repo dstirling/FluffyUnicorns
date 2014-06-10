@@ -22,7 +22,7 @@ namespace fluffyUnicorns.Controllers
 
             //public HttpPostedFileBase File { get; set; }
             // GET: /bookmark/
-           
+            [Authorize]
             public ActionResult Index()
             {
 
@@ -31,7 +31,7 @@ namespace fluffyUnicorns.Controllers
 
                 return View(marks);//must pass parameter to view in order to display information
             }
-
+             [Authorize]
             public ActionResult Create()
             {
                 return View();
@@ -54,7 +54,7 @@ namespace fluffyUnicorns.Controllers
 
                 return View();
             }
-
+             [Authorize]
             public ActionResult Edit(int Id)
             {
                 var book = bookObj.bookmarks.Single(x => x.Id == Id);
@@ -85,7 +85,7 @@ namespace fluffyUnicorns.Controllers
                     return View(book);
                 }
             }
-            
+             [Authorize]
             public ActionResult Delete(int Id)
             {
                 var bmark = bookObj.bookmarks.Single(x => x.Id == Id);
