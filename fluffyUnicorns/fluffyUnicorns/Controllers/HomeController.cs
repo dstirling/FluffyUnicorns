@@ -58,17 +58,17 @@ namespace fluffyUnicorns.Controllers
                  return View();
              }
          }
-         [Authorize]
+         //[Authorize]
         public ActionResult Privacy()
         {
             return View();
         }
-         [Authorize]
+         //[Authorize]
         public ActionResult Terms()
         {
             return View();
         }
-         [Authorize]
+         //[Authorize]
         public ActionResult Help()
         {
             return View();
