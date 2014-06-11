@@ -267,6 +267,7 @@
     <Content Include="Content\foundation.min.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="favicon.ico" />
+    <Content Include="files\chromr.html" />
     <Content Include="Global.asax" />
     <Content Include="Images\bx_loader.gif" />
     <Content Include="Images\cat1.jpg" />
@@ -386,7 +387,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bookmarkFiles\" />
-    <Folder Include="files\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
