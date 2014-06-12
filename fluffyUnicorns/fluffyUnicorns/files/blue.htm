@@ -1,0 +1,2859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)http://www.bluehillscentre.ca/?t=photo-gallery#All -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Photo Gallery ~ Blue Hills Child &amp; Family Centre</title>
+
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="Author" content="RC Design Inc.">
+<meta name="language" content="en-us">
+
+<link rel="Shortcut Icon" href="http://www.bluehillscentre.ca/app/Assets/img/favicon.ico">
+<link rel="icon" href="http://www.bluehillscentre.ca/app/Assets/img/favicon.ico" type="image/x-icon">
+
+<!--<link type="text/css" rel="stylesheet" href="--><!--style.css" />-->
+<link type="text/css" rel="stylesheet" href="./blue_files/saved_resource">
+<script type="text/javascript" async="" src="./blue_files/ga.js"></script><script src="./blue_files/console.js" type="text/javascript"></script>
+<script type="text/javascript">
+	consoleGroupCollapsed("Process LESS files");
+	less = {
+		env : "production"
+		//		env: "development"
+	};
+</script>
+<link rel="stylesheet/less" type="text/css" href="./blue_files/style.less">
+<link rel="stylesheet/less" type="text/css" href="./blue_files/style(1).less">
+<link rel="stylesheet/less" type="text/css" href="./blue_files/photo-gallery_style.less">
+<script src="./blue_files/less.min.js" type="text/javascript"></script><style type="text/css" media="screen" id="less:app-Assets-less-style">/* CSS Document */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+.reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  /*	text-align: left;*/
+
+  font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+body * {
+  position: relative;
+  z-index: 1;
+}
+a img {
+  border: 0;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Typeography
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Headings -------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+  margin: 0;
+}
+/* -------------------------------------------------------------- */
+p {
+  margin-bottom: 1em;
+}
+p img.left {
+  float: left;
+  margin: 1.5em 1.5em 1.5em 0;
+  padding: 0;
+}
+p img.right {
+  float: right;
+  margin: 1.5em 0 1.5em 1.5em;
+}
+blockquote {
+  margin: 1.5em;
+  font-style: italic;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i,
+dfn {
+  font-style: italic;
+}
+dfn {
+  font-weight: bold;
+}
+sup,
+sub {
+  line-height: 0;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+}
+address {
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+pre {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+pre,
+code,
+tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
+  line-height: 1.5;
+}
+/* Lists -------------------------------------------------------------- */
+li ul,
+li ol {
+  margin: 0 1.5em;
+}
+ul,
+ol {
+  margin: 0 1.5em 1.5em 1.5em;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+dl {
+  margin: 0 0 1.5em 0;
+}
+dl dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 1.5em;
+}
+/* Tables -------------------------------------------------------------- */
+table {
+  /*margin-bottom: 1.4em;*/
+
+  width: 100%;
+}
+th {
+  font-weight: bold;
+}
+thead th {
+  /*background: #c3d9ff;*/
+
+}
+th,
+td,
+caption {
+  /*padding: 4px 10px 4px 5px;*/
+
+  vertical-align: top;
+}
+tr.even td {
+  /*background: #e5ecf9;*/
+
+}
+tfoot {
+  font-style: italic;
+}
+caption {
+  /*background: #eee;*/
+
+}
+/* Colors */
+.white {
+  color: #ffffff;
+}
+.fixedFooter {
+  position: fixed;
+  bottom: 0;
+}
+/* Visibility */
+.hidden {
+  display: none;
+}
+.visible {
+  display: inline-block;
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.overflowHidden {
+  overflow: hidden;
+}
+.overflowVisible {
+  overflow: visible;
+}
+/* Dimensions */
+.widthFull {
+  width: 100%;
+}
+/* Positioning */
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.clear-float,
+.clearFloat {
+  clear: both;
+}
+.float-left,
+.floatLeft {
+  float: left;
+}
+.float-right,
+.floatRight {
+  float: right;
+}
+.noFloat,
+.no-float,
+.floatNone {
+  float: none;
+}
+.spacer {
+  height: 10px;
+  clear: both;
+}
+.no-height {
+  height: 0;
+}
+.no-margin,
+.marginZero,
+.noMargin {
+  margin: 0;
+}
+.no-padding,
+.paddingZero,
+.noPadding {
+  padding: 0;
+}
+.no-border,
+.borderZero,
+.noBorder {
+  border: none;
+}
+.marginZeroAuto {
+  margin: 0 auto;
+}
+.marginAutoZero {
+  margin: auto 0;
+}
+.marginAutoAuto {
+  margin: auto auto;
+}
+.valign-middle {
+  vertical-align: middle;
+}
+.negativeZ {
+  z-index: -1;
+}
+/* Typeography */
+.text-align-center,
+.textAlignCenter {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.textAlignRight,
+.text-align-right {
+  text-align: right;
+}
+.bold {
+  font-weight: 700;
+}
+.unbold {
+  font-weight: normal;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.no-underline,
+.noUnderline {
+  text-decoration: none;
+}
+.no-underlineHover:hover,
+.noUnderlineHover:hover {
+  text-decoration: none;
+}
+.uppercase,
+.strToUpper {
+  text-transform: uppercase;
+}
+.lowercase,
+.strToLower {
+  text-transform: lowercase;
+}
+.capitalize,
+.initCap {
+  text-transform: capitalize;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Fonts & Color
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.no-box-shadow {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Dimensions
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.block-container {
+  overflow: hidden;
+  width: 100%;
+}
+.block-container,
+.subblock-container {
+  clear: both;
+  z-index: 800;
+}
+.block {
+  width: 1009px;
+}
+.subblock-container,
+.subblock {
+  z-index: 700;
+  width: 945px;
+}
+.block-container,
+.subblock-container,
+.block,
+.subblock {
+  margin: 0 auto;
+}
+/* DO NO ADJUST!!! */
+body {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'MyriadProRegular', Verdana, Geneva, sans-serif;
+}
+/* DO NO ADJUST!!! */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Dimensions
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Positioning
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Typeography
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	VARS & Reuseable Styles
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	HTML overrides
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+body {
+  color: #58595b;
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+body p,
+body div {
+  color: #58595b;
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+body a {
+  color: #248ab6;
+}
+body a strong:hover,
+body a:hover {
+  color: #58595b;
+}
+body h1,
+body h2,
+body h3,
+body h4 {
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  color: #248ab6;
+}
+body h1 {
+  font-size: 23px;
+  line-height: 23px;
+}
+body h2 {
+  font-size: 18px;
+  line-height: 18px;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid #248ab6;
+}
+body hr {
+  height: 1px;
+  color: #6d6e71;
+}
+strong,
+b,
+.boldme {
+  color: #248ab6;
+  font-weight: bold;
+}
+#contentMain-container .faq-wrapper {
+  width: 95%;
+  border-bottom: 1px solid #D0D2D3;
+}
+#contentMain-container .faq-wrapper .faq-box {
+  padding-bottom: 8px;
+}
+#contentMain-container .faq-wrapper .faq-box .faq-link {
+  padding-top: 8px;
+  vertical-align: middle;
+  border-top: 1px solid #D0D2D3;
+  cursor: pointer;
+}
+#contentMain-container .faq-wrapper .faq-box .faq-link * {
+  color: #248ab6;
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+#contentMain-container .faq-wrapper .faq-box .faq-link .heading {
+  float: left;
+  width: 88%;
+}
+#contentMain-container .faq-wrapper .faq-box .faq-link .toggler {
+  float: right;
+  width: 12px;
+  height: 11px;
+  overflow: inherit;
+}
+#contentMain-container .faq-wrapper .faq-box .faq-link .toggler img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+ul ul {
+  list-style: circle;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*
+
+#donate-container {
+	.box(380, 100%);
+	z-index     : 9999;
+	position    : fixed;
+	right       : -390px;
+	border-left : 10px solid #BD5126;
+	background  : rgb(247, 235, 229);
+
+	.donate-slide {
+		position : fixed;
+		right    : 0;
+		top      : 45%;
+		z-index  : 9999999;
+	}
+
+	#donate {
+		.font(15, 22);
+		padding : 20px 21px;
+		.title {
+			.font(30, 36);
+			color         : #F37C4D;
+			margin-bottom : 15px;
+		}
+
+		.button {
+			.billboardButton;
+			background : #F37C4D;
+			color      : #fff;
+			&:hover {
+				background : #f05215 !important;
+			}
+		}
+
+		p {
+		}
+	}
+
+	.donate-inner {
+		.box(40);
+		left     : -50px;
+		top      : 45%;
+		right    : inherit;
+		position : absolute;
+	}
+
+	&.peakaboo {
+		right : -385px !important;
+	}
+}
+*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	HEADER Tags
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.header-bg {
+  width: 100%;
+  height: 414px;
+  display: block;
+  position: absolute;
+}
+#header-container {
+  z-index: 99;
+}
+#header-container #header {
+  width: 1009px;
+}
+#header-container #header-logo {
+  width: 527px;
+  height: 90px;
+  overflow: inherit;
+  position: relative !important;
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  z-index: 100;
+  float: left;
+}
+#header-container #top-menu-container {
+  width: 300px;
+  height: 40px;
+  overflow: inherit;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	MENU Tags
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#menu-container .menu-container {
+  float: left;
+  padding-right: 8px !important;
+}
+#menu-container .menu-container .menu1 {
+  cursor: pointer;
+}
+#menu-container .menu-container .menu1 a {
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: capitalize;
+  padding: 5px 8px 2px;
+}
+#menu-container .menu-container div.fixChromeHover,
+#menu-container .menu-container div.fixChromeSelected,
+#menu-container .menu-container .menu1:hover > a,
+#menu-container .menu-container > .selected a {
+  -moz-border-radius: 4px;
+  /* Firefox */
+
+  -webkit-border-radius: 4px;
+  /* Chrome, Chrome */
+
+  border-radius: 4px;
+  /* CSS3 */
+
+  background-color: #005C73;
+}
+#menu-container .menu-container .menu1:hover > a,
+#menu-container .menu-container > .selected a {
+  -moz-border-radius: 4px;
+  /* Firefox */
+
+  -webkit-border-radius: 4px;
+  /* Safari, Chrome */
+
+  border-radius: 4px;
+  /* CSS3 */
+
+  background-color: #005C73;
+  height: 52px !important;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+#menu-container .menu-container div.fixSafariHover,
+#menu-container .menu-container div.fixSafariSelected {
+  -moz-border-radius: 4px;
+  /* Firefox */
+
+  -webkit-border-radius: 4px;
+  /* Safari, Chrome */
+
+  border-radius: 4px;
+  /* CSS3 */
+
+  background-color: #005C73;
+  padding-top: 6px;
+  margin-top: -5px;
+  padding-bottom: 0;
+  margin-bottom: -5px;
+  height: 23px !important;
+}
+#menu-container .menu-container div.fixSafariHover a,
+#menu-container .menu-container div.fixSafariSelected a {
+  line-height: 20px !important;
+}
+#menu-container .menu-container .menu1:hover,
+#menu-container .menu-container div.selected {
+  margin-bottom: 0;
+}
+#menu-container .fixSafariContact .menu1 {
+  padding-top: 6px;
+  margin-top: -5px;
+  padding-bottom: 0;
+  margin-bottom: -5px;
+  height: 23px !important;
+  height: 23px !important;
+}
+#menu-container .fixChromeContact .menu1 {
+  margin-top: 3px !important;
+  height: 22px !important;
+}
+#menu-container .subhover .menu1,
+#menu-container .subhover .menu1 a {
+  -moz-border-radius: 4px;
+  /* Firefox */
+
+  -webkit-border-radius: 4px;
+  /* Safari, Chrome */
+
+  border-radius: 4px;
+  /* CSS3 */
+
+  background-color: #005C73;
+}
+.home-icon {
+  text-indent: -9999px !important;
+  left: 5px;
+  text-indent: -9999px !important;
+  top: 12px;
+}
+.menu-link.home-icon.selected {
+  text-indent: -9999px;
+}
+.home-icon span {
+  display: none;
+}
+.neg-top {
+  top: -13px;
+}
+#menu-container {
+  z-index: 999;
+  overflow: visible;
+}
+#menu-container #menu {
+  height: 25px;
+  width: 983px;
+}
+#menu-container #menu .menu-container {
+  padding-right: 5px;
+}
+#menu-container #menu .menu-container .submenu {
+  background: #f1f1f2;
+  display: none;
+  width: 200px;
+  position: absolute;
+  top: 30px;
+  left: -15px;
+  position: absolute;
+  -moz-border-radius: 0 0 4px 4px;
+  /* Firefox */
+
+  -webkit-border-radius: 0 0 4px 4px;
+  /* Safari, Chrome */
+
+  border-radius: 0 0 4px 4px;
+  /* CSS3 */
+
+}
+#menu-container #menu .menu-container .submenu a,
+#menu-container #menu .menu-container .submenu a:visited {
+  color: #58595b;
+  font-size: 14px;
+  line-height: 14px;
+  display: block;
+  padding: 8px 20px;
+  text-decoration: none;
+  -moz-border-radius: 0 0 4px 4px;
+  /* Firefox */
+
+  -webkit-border-radius: 0 0 4px 4px;
+  /* Safari, Chrome */
+
+  border-radius: 0 0 4px 4px;
+  /* CSS3 */
+
+}
+#menu-container #menu .menu-container .submenu a:hover,
+#menu-container #menu .menu-container .submenu a.subhover {
+  text-decoration: underline;
+}
+#menu-container #menu .menu-container .submenu .menu2 .subhover {
+  border: 0;
+}
+#menu-container #menu .menu-container .submenu .trimenu a,
+#menu-container #menu .menu-container .submenu .trimenu a:visited {
+  color: #58595b;
+  font-size: 13px;
+  line-height: 18px;
+  display: block;
+  padding: 4px 20px 4px 35px;
+  text-decoration: none;
+}
+#menu-container #menu .menu-container .submenu .trimenu a:hover {
+  text-decoration: underline;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	BILLBOARD Tags
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	PAGE Tags
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#page-container {
+  padding: 20px 0 50px;
+}
+#page-container #page {
+  margin: 0 auto;
+  width: 1009px;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	CONTENT Tags
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*#contentCenter {
+	.clearFloat;
+	.marginZeroAuto;
+	.box(90%);
+	border-top : 1px solid #666;
+	margin-top : 40px;
+
+	.content-section-container {
+		.box(300);
+		margin : 20px 20px 0 0;
+
+		.content-section {
+		}
+	}
+}*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	CONTENT Main Tags
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#contentMain-container {
+  float: left;
+  width: 750px;
+  margin-top: 20px;
+  z-index: 4;
+}
+#contentMain-container .content-date {
+  display: none;
+}
+#contentMain-container #contentMain {
+  clear: both;
+  margin: 0 auto;
+}
+#contentMain-container #contentMain .content-section-container {
+  clear: both;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	FOOTER Tags
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#scroll-btt {
+  display: none;
+  width: 34px;
+  height: 34px;
+  overflow: inherit;
+  position: fixed;
+  bottom: 50px;
+  margin-left: 965px;
+  z-index: 1000;
+}
+#footer-container {
+  z-index: 700;
+  background: url('http://www.bluehillscentre.ca/app/Assets/less/../../Assets/img/footer/footer-repeat.png') repeat;
+  height: 274px;
+}
+#footer-container .left {
+  float: left;
+  position: relative;
+  margin-right: 35px;
+}
+#footer-container .right {
+  float: right;
+  position: relative;
+}
+#footer-container hr {
+  height: 1px;
+  background: #ACCCD9;
+  border: none;
+  margin-top: 12px;
+}
+#footer-container #footer {
+  width: 960px;
+  height: 70px;
+  padding-top: 35px;
+}
+#footer-container #footer #copyright-container {
+  margin: 20px 0 0 35px;
+}
+#footer-container #footer #rc-logo {
+  position: absolute;
+  top: -1px;
+  left: 141px;
+}
+#footer-container #footer .info-wrap {
+  padding-bottom: 5px;
+}
+#footer-container #footer .info-wrap p {
+  color: #fff;
+}
+#footer-container #footer .info-wrap .button {
+  width: 144px;
+  height: 40px;
+  display: block;
+  background: url('http://www.bluehillscentre.ca/app/Assets/less/../../Assets/img/buttons/login.png') no-repeat;
+  margin: 0px;
+  padding: 0px;
+}
+#footer-container #footer .info-wrap .button span {
+  display: none;
+}
+#footer-container #footer .info-wrap .marg-top {
+  top: 30px;
+  position: relative;
+}
+#footer-container #footer #copyright {
+  font-size: 12px;
+  margin-top: 20px;
+  width: 710px;
+  color: #fff;
+}
+#footer-container #footer #copyright a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: arial;
+}
+#footer-container #footer #copyright img {
+  vertical-align: middle;
+}
+#footer-container #footer #footer-menu {
+  width: 100%;
+  height: 22px;
+  overflow: inherit;
+  margin: 15px 0;
+}
+#footer-container #footer #footer-menu * {
+  color: #fff;
+}
+#footer-container #footer #footer-menu .menu-container {
+  float: left !important;
+  margin-right: 12px;
+}
+#footer-container #footer #footer-menu .menu-container a {
+  color: #fff;
+  text-transform: none;
+}
+#footer-container #footer #footer-menu a {
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#footer-container #footer #footer-menu a:hover,
+#footer-container #footer #footer-menu .footer-selected {
+  text-decoration: underline;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	FORM Tags
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.entry-field .label-wrapper {
+  margin-bottom: 5px;
+}
+.entry-field .label-wrapper label {
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+.entry-field .input-field {
+  width: 250px;
+  font-family: 'MyriadProRegular', Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c8c8c8;
+  color: #58595b !important;
+  margin: 0 auto 10px;
+  padding: 8px 3px;
+}
+.entry-field input,
+.entry-field textarea {
+  -webkit-box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  filter: dropshadow(color=rgba(0, 0, 0, 0.5), offx=1, offy=1);
+}
+.entry-field select {
+  padding: 0 0 0 5px;
+}
+.entry-field select option {
+  width: 235px;
+  border: 0;
+}
+.entry-field textarea {
+  width: 560px;
+  resize: none;
+}
+.entry-field .input-value {
+  display: none;
+}
+.search-box {
+  background: url("http://www.bluehillscentre.ca/app/Assets/less/../img/header/search-bg.png") no-repeat scroll 2px 0 transparent !important;
+  border: medium none !important;
+  color: #929497;
+  float: right;
+  font-size: 15px;
+  height: 30px;
+  padding: 0 15px 0 30px !important;
+  width: 183px !important;
+}
+.search-wrap {
+  float: right;
+  top: 75px;
+  right: 40px;
+}
+.search-icon {
+  background: url('http://www.bluehillscentre.ca/app/Assets/less/../img/icons/search-icon.png') no-repeat transparent !important;
+  width: 17px;
+  height: 17px;
+  display: block;
+  position: relative;
+  text-indent: -9999px;
+  float: left;
+  margin-top: 2px !important;
+  margin-bottom: 0px !important;
+  left: 39px !important;
+  width: 17px !important;
+  top: 4px;
+  margin: 0;
+  padding: 0;
+}
+.buttonHover {
+  background: #5da8bf;
+  color: #ffffff;
+  text-decoration: none;
+}
+.button {
+  text-align: center;
+  width: auto;
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 22px;
+  background: #00728d;
+  border: 0 none;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.button:hover {
+  background: #5da8bf;
+  color: #ffffff;
+  text-decoration: none;
+}
+.form-notice {
+  clear: both;
+  font-weight: bold;
+  margin-top: 117px;
+}
+form table td {
+  vertical-align: top;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#menu-container #menu .welcome- {
+  visibility: hidden;
+  width: 40px;
+  height: 15px;
+  overflow: inherit;
+}
+#menu-container #menu .welcome- div {
+  width: 35px;
+  height: 15px;
+  overflow: inherit;
+}
+#menu-container #menu .about-us .submenu {
+  border-top: 5px solid #52b6e7;
+}
+#menu-container #menu .how-we-help .submenu {
+  border-top: 5px solid #f27241;
+}
+#menu-container #menu .our-services .submenu {
+  border-top: 5px solid #90c748;
+  width: 400px !important;
+}
+#menu-container #menu .our-services .submenu .float-left,
+#menu-container #menu .our-services .submenu .float-right {
+  width: 50%;
+}
+#menu-container #menu .our-services .submenu .float-left .trimenu,
+#menu-container #menu .our-services .submenu .float-right .trimenu {
+  width: 100%;
+}
+#menu-container #menu .our-services .submenu .float-left .trimenu div,
+#menu-container #menu .our-services .submenu .float-right .trimenu div {
+  max-width: 200px;
+}
+#menu-container #menu .our-services .submenu .menu2 {
+  font-weight: 700;
+}
+#menu-container #menu .faqs .submenu {
+  border-top: 5px solid #ffcc23;
+  /*a {
+			   color : #58595B !important;
+			   &:hover {
+				   color : #fff !important;
+			   }
+		   }*/
+
+}
+#menu-container #menu .news-and-events .submenu {
+  border-top: 5px solid #5da8a4;
+}
+#menu-container #menu .resources .submenu {
+  /*a {
+			   color : #58595B !important;
+			   &:hover {
+				   color : #fff !important;
+			   }
+		   }*/
+
+  border-top: 5px solid #c29c17;
+}
+#menu-container #menu .get-involved .submenu {
+  width: 240px;
+  border-top: 5px solid #5da8a4;
+}
+.testimonial-wrap {
+  position: relative;
+  margin-top: 20px;
+}
+.testimonial-wrap .test-icon {
+  background: url('/app/Views/Homepage/img/icons/bubbles.png') no-repeat;
+  padding-top: 90px;
+  color: #39b44a;
+  font-size: 30px;
+}
+.testimonial-wrap .testimonial {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  margin-right: 105px;
+  float: left;
+  width: 245px;
+  background: url('/app/Views/Homepage/img/testi-bg.png') repeat #e1eaef;
+}
+.testimonial-wrap .testimonial .top {
+  width: 245px;
+  height: 12px;
+  display: block;
+  background: url('/app/Views/Homepage/img/testi-top.png') no-repeat;
+  position: absolute;
+  top: 0px;
+}
+.testimonial-wrap .testimonial .content-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.testimonial-wrap .testimonial .content-wrap h4 {
+  margin-bottom: 2px;
+}
+.testimonial-wrap .testimonial .bottom {
+  display: block;
+  background: url('/app/Views/Homepage/img/testi-bottom.png') no-repeat;
+  width: 245px;
+  height: 26px;
+  position: absolute;
+  bottom: 0px;
+}
+.testimonial-wrap .right {
+  float: right;
+  margin-right: 0px;
+}
+.related-links .hasTriLinks {
+  background: url('/app/Assets/img/sidebar/inner/trimenu-selector.png') right center no-repeat;
+}
+.related-links .tri-related-links-container {
+  display: none;
+  width: 290px;
+  position: absolute;
+  left: 200px;
+  margin-top: -65px;
+  padding-left: 21px;
+}
+.related-links .tri-related-links-container .tri-related-links {
+  -moz-border-radius: 4px;
+  /* Firefox */
+
+  -webkit-border-radius: 4px;
+  /* Safari, Chrome */
+
+  border-radius: 4px;
+  /* CSS3 */
+
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px;
+  background: #fff;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+.related-links .tri-related-links-container .tri-related-stub {
+  background: url('/app/Assets/img/sidebar/inner/trimenu-stub.png') no-repeat;
+  width: 21px;
+  height: 30px;
+  overflow: inherit;
+  position: absolute;
+  top: 20px;
+  left: 1px;
+  z-index: 100;
+}
+#recaptcha_widget_div {
+  width: 318px;
+  margin-right: 0;
+  padding-right: 0;
+}
+.form-buttons {
+  margin-top: 2px;
+  padding-left: 20px;
+}
+/*****/
+.member-table {
+  margin: 20px 0 40px;
+}
+.member-table .member-box {
+  width: 177px;
+  height: 82px;
+  overflow: inherit;
+  background: url(http://www.bluehillscentre.ca/app/Assets/less/../img/pages/member-placeholder.jpg) no-repeat;
+}
+.member-table .member-box .title {
+  font-family: 'ArcherMedium', Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 6px 15px;
+}
+.member-table .member-box .name {
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #27a9e0;
+  padding: 15px 15px;
+}
+#myGallery .rtg-categories a {
+  text-align: center;
+  width: auto;
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 22px;
+  background: #00728d;
+  border: 0 none;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#myGallery .rtg-categories a:hover {
+  background: #5da8bf;
+  color: #ffffff;
+  text-decoration: none;
+}
+#myGallery .rtg-categories .rtg-current-category {
+  background: #5da8bf;
+  color: #ffffff;
+  text-decoration: none;
+}
+.resource-box {
+  margin-bottom: 10px;
+}
+#contentMain .content-section .career-box {
+  border-top: 1px solid #BEBEBE;
+  clear: both;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+#contentMain .content-section .career-box h2 {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+#contentMain .content-section .career-box h3 {
+  margin-bottom: 0.5em;
+}
+#contentMain .content-section .career-box .date {
+  width: 42px;
+  height: 24px;
+  overflow: inherit;
+  margin-top: -10px;
+  margin-right: 20px;
+  float: left;
+  text-align: center;
+  background: #00728d;
+  cursor: pointer;
+}
+#contentMain .content-section .career-box .date > div {
+  color: #fff;
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+}
+#contentMain .content-section .career-box .date .month {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 10px;
+}
+#contentMain .content-section .career-box .date .day {
+  font-size: 35px;
+  line-height: 35px;
+}
+#contentMain .content-section .career-box .date .clickButton {
+  font-size: 42px;
+  line-height: 42px;
+  cursor: pointer;
+  margin-top: -22px;
+}
+#contentMain .content-section .career-box .details {
+  float: left;
+  width: 600px;
+  margin-top: -7px;
+}
+#contentMain .content-section .career-box .download {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  width: 135px;
+}
+#contentMain .content-section .career-box .apply {
+  width: 250px;
+}
+</style><style type="text/css" media="screen" id="less:app-Views-Default-less-style">/* Colors */
+.white {
+  color: #ffffff;
+}
+.fixedFooter {
+  position: fixed;
+  bottom: 0;
+}
+/* Visibility */
+.hidden {
+  display: none;
+}
+.visible {
+  display: inline-block;
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.overflowHidden {
+  overflow: hidden;
+}
+.overflowVisible {
+  overflow: visible;
+}
+/* Dimensions */
+.widthFull {
+  width: 100%;
+}
+/* Positioning */
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.clear-float,
+.clearFloat {
+  clear: both;
+}
+.float-left,
+.floatLeft {
+  float: left;
+}
+.float-right,
+.floatRight {
+  float: right;
+}
+.noFloat,
+.no-float,
+.floatNone {
+  float: none;
+}
+.spacer {
+  height: 10px;
+  clear: both;
+}
+.no-height {
+  height: 0;
+}
+.no-margin,
+.marginZero,
+.noMargin {
+  margin: 0;
+}
+.no-padding,
+.paddingZero,
+.noPadding {
+  padding: 0;
+}
+.no-border,
+.borderZero,
+.noBorder {
+  border: none;
+}
+.marginZeroAuto {
+  margin: 0 auto;
+}
+.marginAutoZero {
+  margin: auto 0;
+}
+.marginAutoAuto {
+  margin: auto auto;
+}
+.valign-middle {
+  vertical-align: middle;
+}
+.negativeZ {
+  z-index: -1;
+}
+/* Typeography */
+.text-align-center,
+.textAlignCenter {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.textAlignRight,
+.text-align-right {
+  text-align: right;
+}
+.bold {
+  font-weight: 700;
+}
+.unbold {
+  font-weight: normal;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.no-underline,
+.noUnderline {
+  text-decoration: none;
+}
+.no-underlineHover:hover,
+.noUnderlineHover:hover {
+  text-decoration: none;
+}
+.uppercase,
+.strToUpper {
+  text-transform: uppercase;
+}
+.lowercase,
+.strToLower {
+  text-transform: lowercase;
+}
+.capitalize,
+.initCap {
+  text-transform: capitalize;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Fonts & Color
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.no-box-shadow {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Dimensions
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.block-container {
+  overflow: hidden;
+  width: 100%;
+}
+.block-container,
+.subblock-container {
+  clear: both;
+  z-index: 800;
+}
+.block {
+  width: 1009px;
+}
+.subblock-container,
+.subblock {
+  z-index: 700;
+  width: 945px;
+}
+.block-container,
+.subblock-container,
+.block,
+.subblock {
+  margin: 0 auto;
+}
+/* DO NO ADJUST!!! */
+body {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'MyriadProRegular', Verdana, Geneva, sans-serif;
+}
+/* DO NO ADJUST!!! */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Dimensions
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Positioning
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Typeography
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#menu-container {
+  background: url("http://www.bluehillscentre.ca/app/Views/Default/less/../../../Assets/img/header/inner/menu-bg.png");
+  height: 30px;
+  padding-top: 15px;
+}
+.header-bg {
+  background: url('http://www.bluehillscentre.ca/app/Views/Default/less/../../../Assets/img/header/inner/header-bg.png') 840px no-repeat;
+  margin-top: -48px;
+}
+.inner-header {
+  width: 100%;
+  height: 115px;
+  overflow: inherit;
+  padding-bottom: 10px;
+}
+#billboard-container {
+  z-index: 98;
+  clear: both;
+  background: url('http://www.bluehillscentre.ca/app/Views/Default/less/../../../Assets/img/header/biilboard-background.png') center;
+  width: 100%;
+  padding: 8px;
+  overflow: hidden;
+}
+#billboard-container #billboard {
+  width: 100%;
+  height: 208px;
+  overflow: inherit;
+  background-color: #666;
+}
+#billboard-container #billboard .block {
+  width: 246px;
+  height: 208px;
+  overflow: inherit;
+  background: #53B6E7;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+#billboard-container #billboard .img {
+  width: 763px;
+  height: 208px;
+  overflow: inherit;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 3;
+}
+#billboard-container #billboard .moredots {
+  background: url('http://www.bluehillscentre.ca/app/Views/Default/less/../../../Assets/img/header/inner/dotted-cover.png') center;
+  width: 100%;
+  height: 208px;
+  overflow: inherit;
+  z-index: 4;
+}
+#billboard-container #billboard .heading {
+  font-family: 'ArcherBold', Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  line-height: 46px;
+  font-size: 35px;
+  z-index: 5;
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+#page .subblock-container,
+#page .subblock {
+  width: 100%;
+}
+#contentCenter {
+  border-bottom: 1px solid #d0d2d3;
+  margin: 0 auto 20px;
+  padding-bottom: 15px;
+}
+#contentCenter .content-section-container {
+  width: 345px;
+}
+#contentCenter .float-left {
+  padding-right: 18px;
+}
+#contentCenter .float-right {
+  border-left: 1px solid #d0d2d3;
+  padding-left: 40px;
+}
+#contentCenter h2,
+#contentMain h2 {
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 29px;
+  line-height: 36px;
+  color: #00728D;
+  border: 0 !important;
+  display: block !important;
+  margin-bottom: 5px !important;
+}
+#contentCenter h3,
+#contentMain h3 {
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 24px;
+}
+#contentMain .subheading {
+  width: 90%;
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #5da8be;
+  margin-bottom: 10px;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	CONTENT SIDEBAR Tags
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#contentSidebar-container {
+  float: left;
+  margin: 0;
+  width: 250px;
+  z-index: 900 !important;
+}
+#contentSidebar-container #contentSidebar {
+  width: 208px;
+  margin-top: 20px;
+  margin-left: 17px;
+}
+#contentSidebar-container #contentSidebar .content-section-container {
+  padding: 0 17px;
+  margin-bottom: 5px;
+}
+.related-links {
+  padding: 0 10px !important;
+  border-right: 1px solid #bebebe;
+}
+.related-links .heading {
+  display: none;
+}
+.related-links p {
+  margin-bottom: 0.5em;
+}
+.related-links .sub-related {
+  margin-left: 20px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.related-links .sub-related a {
+  font-size: 15px;
+  line-height: 18px;
+}
+.related-links a {
+  font-family: 'ArcherMedium', Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 22px;
+  color: #6d6e71;
+  text-decoration: none;
+}
+.related-links a:hover {
+  color: #00728d;
+}
+.related-links .selected {
+  color: #00728d;
+}
+.news-sidebar {
+  margin-top: 20px;
+  padding: 0 !important;
+  background: url('http://www.bluehillscentre.ca/app/Views/Default/less/../../../Assets/img/sidebar/inner/news-bg.jpg') center;
+}
+.news-sidebar h2 {
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 22px;
+  display: block;
+  color: #fff;
+  background: #27a9e0;
+  padding: 5px 10px;
+  border: 0 !important;
+}
+.news-sidebar .news-item {
+  border-bottom: 1px solid #d0d2d3;
+  margin-bottom: 15px;
+  padding: 5px 14px 20px;
+}
+.news-sidebar .news-item p {
+  margin: 0;
+}
+.news-sidebar .news-item .date {
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  color: #27a9e0;
+}
+.news-sidebar .news-item .title {
+  font-family: 'Archer', Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #414042;
+}
+.news-sidebar .news-item .content {
+  font-size: 15px;
+  line-height: 22px;
+  color: #58595b;
+}
+.news-sidebar .news-item .link a {
+  color: #27a9e0;
+  font-family: 'Avenir', Verdana, Geneva, sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+.button {
+  -webkit-transition: background 0.25s ease;
+  -moz-transition: background 0.25s ease;
+  -o-transition: background 0.25s ease;
+  -ms-transition: background 0.25s ease;
+  transition: background 0.25s ease;
+}
+#donate-container .donate-inner {
+  left: -40px;
+}
+</style><style type="text/css" media="screen" id="less:app-Controllers-2-photo-gallery-less-photo-gallery_style">/* Controllers::2::photo-gallery::Less ~ Thu, 15 Nov 2012 15:19:58 -0500 */
+/* CSS Document */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+.reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  /*	text-align: left;*/
+
+  font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+body * {
+  position: relative;
+  z-index: 1;
+}
+a img {
+  border: 0;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Typeography
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Headings -------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+  margin: 0;
+}
+/* -------------------------------------------------------------- */
+p {
+  margin-bottom: 1em;
+}
+p img.left {
+  float: left;
+  margin: 1.5em 1.5em 1.5em 0;
+  padding: 0;
+}
+p img.right {
+  float: right;
+  margin: 1.5em 0 1.5em 1.5em;
+}
+blockquote {
+  margin: 1.5em;
+  font-style: italic;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i,
+dfn {
+  font-style: italic;
+}
+dfn {
+  font-weight: bold;
+}
+sup,
+sub {
+  line-height: 0;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+}
+address {
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+pre {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+pre,
+code,
+tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
+  line-height: 1.5;
+}
+/* Lists -------------------------------------------------------------- */
+li ul,
+li ol {
+  margin: 0 1.5em;
+}
+ul,
+ol {
+  margin: 0 1.5em 1.5em 1.5em;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
+dl {
+  margin: 0 0 1.5em 0;
+}
+dl dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 1.5em;
+}
+/* Tables -------------------------------------------------------------- */
+table {
+  /*margin-bottom: 1.4em;*/
+
+  width: 100%;
+}
+th {
+  font-weight: bold;
+}
+thead th {
+  /*background: #c3d9ff;*/
+
+}
+th,
+td,
+caption {
+  /*padding: 4px 10px 4px 5px;*/
+
+  vertical-align: top;
+}
+tr.even td {
+  /*background: #e5ecf9;*/
+
+}
+tfoot {
+  font-style: italic;
+}
+caption {
+  /*background: #eee;*/
+
+}
+/* Colors */
+.white {
+  color: #ffffff;
+}
+.fixedFooter {
+  position: fixed;
+  bottom: 0;
+}
+/* Visibility */
+.hidden {
+  display: none;
+}
+.visible {
+  display: inline-block;
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.overflowHidden {
+  overflow: hidden;
+}
+.overflowVisible {
+  overflow: visible;
+}
+/* Dimensions */
+.widthFull {
+  width: 100%;
+}
+/* Positioning */
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.clear-float,
+.clearFloat {
+  clear: both;
+}
+.float-left,
+.floatLeft {
+  float: left;
+}
+.float-right,
+.floatRight {
+  float: right;
+}
+.noFloat,
+.no-float,
+.floatNone {
+  float: none;
+}
+.spacer {
+  height: 10px;
+  clear: both;
+}
+.no-height {
+  height: 0;
+}
+.no-margin,
+.marginZero,
+.noMargin {
+  margin: 0;
+}
+.no-padding,
+.paddingZero,
+.noPadding {
+  padding: 0;
+}
+.no-border,
+.borderZero,
+.noBorder {
+  border: none;
+}
+.marginZeroAuto {
+  margin: 0 auto;
+}
+.marginAutoZero {
+  margin: auto 0;
+}
+.marginAutoAuto {
+  margin: auto auto;
+}
+.valign-middle {
+  vertical-align: middle;
+}
+.negativeZ {
+  z-index: -1;
+}
+/* Typeography */
+.text-align-center,
+.textAlignCenter {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.textAlignRight,
+.text-align-right {
+  text-align: right;
+}
+.bold {
+  font-weight: 700;
+}
+.unbold {
+  font-weight: normal;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.no-underline,
+.noUnderline {
+  text-decoration: none;
+}
+.no-underlineHover:hover,
+.noUnderlineHover:hover {
+  text-decoration: none;
+}
+.uppercase,
+.strToUpper {
+  text-transform: uppercase;
+}
+.lowercase,
+.strToLower {
+  text-transform: lowercase;
+}
+.capitalize,
+.initCap {
+  text-transform: capitalize;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Fonts & Color
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.no-box-shadow {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Dimensions
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.block-container {
+  overflow: hidden;
+  width: 100%;
+}
+.block-container,
+.subblock-container {
+  clear: both;
+  z-index: 800;
+}
+.block {
+  width: 1009px;
+}
+.subblock-container,
+.subblock {
+  z-index: 700;
+  width: 945px;
+}
+.block-container,
+.subblock-container,
+.block,
+.subblock {
+  margin: 0 auto;
+}
+/* DO NO ADJUST!!! */
+body {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'MyriadProRegular', Verdana, Geneva, sans-serif;
+}
+/* DO NO ADJUST!!! */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Dimensions
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Positioning
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Typeography
+----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.related-links {
+  display: none;
+}
+.rtg-images img {
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+</style>
+<script>consoleGroupEnd();</script>
+
+<link type="text/css" rel="stylesheet" href="./blue_files/saved_resource(1)">
+
+<style type="text/css">
+	
+	.rtg-categories {
+		width: 100%;
+		height: 50px;
+		visibility: hidden;
+		margin: 0 !important;
+	}
+	.rtg-categories > li {
+	   display:inline !important;
+	}
+	.scroll-pane
+	{
+		width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+		overflow: hidden;
+		padding: 0px;
+		width: 550px;
+		margin-left: 99px;
+		height: auto;
+	}
+
+	</style>
+
+
+<meta name="keywords" content="">
+<meta name="description" content="...">
+
+<script type="text/javascript">
+	var RecaptchaOptions = {
+		theme : 'white'
+	};
+</script>
+</head>
+<body>
+<div id="donate-container">
+	<div class="donate-slide donate-inner"><a href="http://www.bluehillscentre.ca/?t=photo-gallery#donate-tab" class=""><img src="./blue_files/donate-button-inner.png" width="33" height="122" alt="Donate" class=""></a></div>
+	<div id="donate">
+		<div class="title">
+			How You Can Help
+		</div>
+		<p>In order to deliver programs and services that are so essential to our clients, Blue Hills Child and Family Centre depends on financial support from government, corporations, foundations, community organizations and individuals. Blue Hills appreciates the support of people like you to help Blue hills continue offering innovative and effective programs to families in need.</p>
+<p><strong>We gratefully welcome donations of any size. Charitable donation receipts will be issued for all gifts over $20.00.</strong></p>
+<p><strong>Your gift can be designated to Blue Hills or you can request that your gift be used where help is needed most.</strong></p>
+<p><strong>You can donate to Blue Hills through<br></strong> • monthly gifts<br> • one time gifts<br> • in memoriam and in honorarium</p>
+<p>You can make your donation quickly on-line by following the links below:</p>
+		<p class="text-align-center" style="padding-top: 5px;">
+			<a href="http://www.canadahelps.org/CharityProfilePage.aspx?charityID=s40898" target="_blank" class="button">Donate Now &gt;</a>
+		</p>
+	</div>
+</div><div id="menu-container" class="block-container">
+	<div id="menu" class="block">
+		
+					<div id="main-menu-2" class="menu-container main-menu-2  welcome-" style="visibility: visible;">
+						<div class="menu1 menutop neg-top" style="height: 29px; top: -10px;"><a href="http://www.bluehillscentre.ca/?t=home" class="home-icon"><img src="./blue_files/home-icon.png" alt="Home"></a></div>
+					</div>
+					<div id="main-menu-50" class="menu-container main-menu-50 about-us">
+						<div class="menu1 menutop hasSub" style="margin-top: -6px; height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=vision-mission-values">About Us <img src="./blue_files/menu-with-sub.png" style="vertical-align: middle; padding: 13px 0px;"></a>
+						</div>
+						<div id="main-menu-50-Submenu" class="submenu main-menu-50-Submenu  about-us-submenu">
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=vision-mission-values">Vision, Mission, Values</a>
+							</div><div class="trimenu menu-main-menu-50-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=our-strategic-plan">Our Strategic Plan</a>
+							</div><div class="trimenu menu-main-menu-50-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=our-clinical-practices">Transformation of Our Clinical Practices</a>
+							</div><div class="trimenu menu-main-menu-50-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=board-of-directors">Board Of Directors</a>
+							</div><div class="trimenu menu-main-menu-50-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=Annual%20Reports">Annual Reports</a>
+							</div><div class="trimenu menu-main-menu-50-Trimenu">
+					</div>
+						</div>
+				</div>
+					<div id="main-menu-54" class="menu-container main-menu-54 how-we-help">
+						<div class="menu1 menutop hasSub" style="margin-top: -6px; height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=our-process">How We Help <img src="./blue_files/menu-with-sub.png" style="vertical-align: middle; padding: 13px 0px;"></a>
+						</div>
+						<div id="main-menu-54-Submenu" class="submenu main-menu-54-Submenu  how-we-help-submenu">
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=our-process">Our Process</a>
+							</div><div class="trimenu menu-main-menu-54-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=the-experience">The Blue Hill Experience</a>
+							</div><div class="trimenu menu-main-menu-54-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=sucess-stories">Success Stories</a>
+							</div><div class="trimenu menu-main-menu-54-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=testimonials">Testimonials</a>
+							</div><div class="trimenu menu-main-menu-54-Trimenu">
+					</div>
+						</div>
+				</div>
+					<div id="main-menu-51" class="menu-container main-menu-51 our-services">
+						<div class="menu1 menutop hasSub" style="margin-top: -6px; height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=overview">Our Services <img src="./blue_files/menu-with-sub.png" style="vertical-align: middle; padding: 13px 0px;"></a>
+						</div>
+						<div id="main-menu-51-Submenu" class="submenu main-menu-51-Submenu  our-services-submenu">
+							
+							
+							
+							
+						<div class="float-left"><div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=overview">Overview</a>
+							</div><div class="trimenu menu-main-menu-51-Trimenu">
+					</div><div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=intake-services">Core Clinical Services</a>
+							</div><div class="trimenu menu-main-menu-51-Trimenu">
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=intake-services">Intake Services</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=brief-services">Brief Services</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=mental-health-services">Intensive Mental Health Services</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=birth-to-six">Birth To Six Services</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=clinical-services">Integrated Clinical Services</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=children-therapeutic-services">Children's Residential Therapeutic Services</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=community-outreach">Community Outreach &amp; Capacity Building</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=bridging-navigation">Bridging Navigation with the Chippewas of Georgina</a>
+						</div>
+					</div></div><div class="float-right"><div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=family-mediation">Hosted Services</a>
+							</div><div class="trimenu menu-main-menu-51-Trimenu">
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=family-mediation">Family Mediation and Information Services</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=central-east-region">Central East Region Alternative Dispute Resolution</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=yrccrs">York Region Centralized Children's Respite Se</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=yrccrs-consultation-and-assessment">Centralized Consultation and Assessment</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=aok-mother-goose-program">All Our Kids (AOK) - Mother Goose Program</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=compass">Compass - Community Partners with Schools</a>
+						</div>
+					</div><div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=partnerships">Services In Partnerships</a>
+							</div><div class="trimenu menu-main-menu-51-Trimenu">
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=collab-day-treatment">Collaborative Day Treatment Program</a>
+						</div>
+						<div class="menu3">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=children-enrichment-service">Children In Care Enrichment Services</a>
+						</div>
+					</div></div><div class="clear-float"></div> </div>
+				</div>
+					<div id="main-menu-44" class="menu-container main-menu-44 faqs">
+						<div class="menu1 menutop hasSub" style="margin-top: -6px; height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=glossary">FAQs <img src="./blue_files/menu-with-sub.png" style="vertical-align: middle; padding: 13px 0px;"></a>
+						</div>
+						<div id="main-menu-44-Submenu" class="submenu main-menu-44-Submenu  faqs-submenu">
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=glossary">Glossary</a>
+							</div><div class="trimenu menu-main-menu-44-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=what-is-mental-health">What is Mental Health</a>
+							</div><div class="trimenu menu-main-menu-44-Trimenu">
+					</div>
+						</div>
+				</div>
+					<div id="main-menu-45" class="menu-container main-menu-45 news-and-events">
+						<div class="menu1 menutop hasSub selected fixChromeSelected" style="margin-top: -6px; height: 29px;">
+							<a class="menu-link selected fixChromeSelected" href="http://www.bluehillscentre.ca/?t=news-and-events">News &amp; Events <img src="./blue_files/menu-with-sub.png" style="vertical-align: middle; padding: 13px 0px;"></a>
+						</div>
+						<div id="main-menu-45-Submenu" class="submenu main-menu-45-Submenu  news-and-events-submenu">
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=news-and-events">News &amp; Events</a>
+							</div><div class="trimenu menu-main-menu-45-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link selected fixChromeSelected" href="http://www.bluehillscentre.ca/?t=photo-gallery">Photo Gallery</a>
+							</div><div class="trimenu menu-main-menu-45-Trimenu">
+					</div>
+						</div>
+				</div>
+					<div id="main-menu-52" class="menu-container main-menu-52 resources">
+						<div class="menu1 menutop hasSub" style="margin-top: -6px; height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=linnks">Resources <img src="./blue_files/menu-with-sub.png" style="vertical-align: middle; padding: 13px 0px;"></a>
+						</div>
+						<div id="main-menu-52-Submenu" class="submenu main-menu-52-Submenu  resources-submenu">
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=linnks">Links</a>
+							</div><div class="trimenu menu-main-menu-52-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=articles">Articles/Books</a>
+							</div><div class="trimenu menu-main-menu-52-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=reports">Reports</a>
+							</div><div class="trimenu menu-main-menu-52-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=reporting-child-abuse">Reporting Child Abuse</a>
+							</div><div class="trimenu menu-main-menu-52-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=separation-and-divorce">Separation and Divorce</a>
+							</div><div class="trimenu menu-main-menu-52-Trimenu">
+					</div>
+						</div>
+				</div>
+					<div id="main-menu-53" class="menu-container main-menu-53 get-involved">
+						<div class="menu1 menutop hasSub" style="margin-top: -6px; height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=careers">Get Involved <img src="./blue_files/menu-with-sub.png" style="vertical-align: middle; padding: 13px 0px;"></a>
+						</div>
+						<div id="main-menu-53-Submenu" class="submenu main-menu-53-Submenu  get-involved-submenu">
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=careers">Career Opportunities</a>
+							</div><div class="trimenu menu-main-menu-53-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=volunteers">Volunteers Opportunities</a>
+							</div><div class="trimenu menu-main-menu-53-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=board-members">Board Member Opportunities</a>
+							</div><div class="trimenu menu-main-menu-53-Trimenu">
+					</div>
+							<div class="menu2">
+								<a class="menu-link" href="http://www.bluehillscentre.ca/?t=students">Student Placement/Internship Opportunities</a>
+							</div><div class="trimenu menu-main-menu-53-Trimenu">
+					</div>
+						</div>
+				</div>
+					<div id="main-menu-43" class="menu-container main-menu-43  contact-us fixChromeContact">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=contact-us">Contact Us</a>
+						</div>
+					</div>	</div>
+</div>
+<div id="header-container" class="block-container">
+
+	<div class="header-bg"></div>
+
+	<div id="header" class="block">
+
+		<div class="inner-header">
+			<div id="header-logo">
+				<a href="http://www.bluehillscentre.ca/?t=home" class=""><img src="./blue_files/logo.png" width="344" height="82" alt="logo.png" class=""></a>			</div>
+
+			<div class="search-wrap">
+				<form action="" method="get">
+					<input type="hidden" name="t" value="search" style="display: none; width: 0px;">
+					<input class="search-box" type="text" name="q" value="Search" title="Search">
+					<input type="submit" class="button search-icon" value="Start Search">
+				</form>
+			</div>
+			<div class="clear-float"></div>
+		</div>
+		<div id="billboard-container">
+			<div id="billboard">
+				
+			<div class="">
+				<div class="block" style="background: #5DA7BE">
+				</div>
+				<div class="img">
+					<img src="./blue_files/105_heading_image.jpg" width="763" height="208" alt="heading_image" class="">
+				</div>
+				<div class="moredots">
+				</div>
+				<div class="heading">
+					News<br>&amp; Events
+				</div>
+			</div>			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="page-container" class="block-container">
+	<div id="page" class="block">
+		<div id="content-container" class="content-container subblock-container">
+			<div id="content" class="subblock">
+
+				<div id="contentSidebar-container">
+					<div id="contentSidebar">
+
+						
+		<div id="cs-news-and-events-links" class="content-section-container siblings-with-all-children related-links">
+		<div class="content-section"><h2 class="heading">News &amp; Events Links</h2>
+			<div class="body"><p></p><p class="sub-news-and-events"><a href="http://www.bluehillscentre.ca/?t=news-and-events">News &amp; Events</a></p><p class="sub-photo-gallery"><a href="http://www.bluehillscentre.ca/?t=photo-gallery" class="selected">Photo Gallery</a></p><p></p>
+				
+			</div>
+		</div>
+		</div>
+						
+		<div id="cs-news" class="content-section-container news-sidebar">
+		<div class="content-section"><h2 class="heading">News</h2>
+			<div class="body"><p>
+			</p><div class="news-item">
+				<p class="date">
+					2014-05-27
+				</p>
+				<p class="title">
+					AGM 2014
+				</p>
+				<div class="content">
+					
+				</div>
+				<p class="link">
+					<a href="http://www.bluehillscentre.ca/?t=news-and-events&id=332" class="">Continue Reading &gt;</a>
+				</p>
+			</div>
+			
+			<div class="news-item">
+				<p class="date">
+					2014-05-22
+				</p>
+				<p class="title">
+					Friday Oct 10  World Mental Health Day
+				</p>
+				<div class="content">
+					World Mental Health Day, which is supported by the United Nations (UN), is annually held on October ...
+				</div>
+				<p class="link">
+					<a href="http://www.bluehillscentre.ca/?t=news-and-events&id=331" class="">Continue Reading &gt;</a>
+				</p>
+			</div>
+			
+			<div class="news-item">
+				<p class="date">
+					2014-05-20
+				</p>
+				<p class="title">
+					Finally one place bringing services to the Markham community in York region – Community Connects 
+				</p>
+				<div class="content">
+					Press Release
+&nbsp;
+Finally one place bringing services to the Markham community in York region – Commun...
+				</div>
+				<p class="link">
+					<a href="http://www.bluehillscentre.ca/?t=news-and-events&id=307" class="">Continue Reading &gt;</a>
+				</p>
+			</div>
+			<p></p>
+				
+			</div>
+		</div>
+		</div>					</div>
+				</div>
+
+				<div id="contentMain-container" class="contentMain-container">
+										<div id="contentMain">
+						
+			<div id="myGallery" class="rtg-gallery"><div class="scroll-pane horizontal-only jspScrollable" style="overflow: hidden; padding: 0px; width: 550px;" tabindex="0"><div class="jspContainer" style="width: 550px; height: 60px;"><div class="jspPane" style="padding: 0px; width: 550px; left: 0px;"><ul class="rtg-categories" style="margin-left: 65px; visibility: visible; width: 812px;"><li><a href="./blue_files/blue.htm" category="All" class="rtg-current-category">All</a></li><li><a href="http://www.bluehillscentre.ca/?t=photo-gallery#Blue_Hills" category="Blue Hills">Blue Hills</a></li><li><a href="http://www.bluehillscentre.ca/?t=photo-gallery#AGM" category="AGM">AGM</a></li><li><a href="http://www.bluehillscentre.ca/?t=photo-gallery#AWARDS" category="AWARDS">AWARDS</a></li><li><a href="http://www.bluehillscentre.ca/?t=photo-gallery#Community_Connects Launch Event" category="Community Connects Launch Event">Community Connects Launch Event</a></li></ul></div><div class="jspHorizontalBar"><div class="jspCap jspCapLeft"></div><div class="jspTrack" style="width: 492px;"><div class="jspDrag" style="width: 334px;"><div class="jspDragLeft"></div><div class="jspDragRight"></div></div></div><div class="jspCap jspCapRight"></div></div></div></div>
+                <div class="rtg-images" style="height: 1397px; width: 620px; left: 65px;">
+					<div data-category="Blue Hills" style="cursor: pointer; width: 200px; height: 138px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 0px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/4/32_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 138px;"><img src="./blue_files/thumb_32_photo.JPG" style="width: 200px; height: 138px;"></a>
+			        <span style="width: 200px; height: 138px;"></span></div>
+					<div data-category="Blue Hills" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 0px; left: 210px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/4/31_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_31_photo.JPG" style="width: 200px; height: 150px; opacity: 1;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Blue Hills" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 0px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/4/33_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_33_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Blue Hills" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 148px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/4/34_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_34_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Blue Hills" style="cursor: pointer; width: 200px; height: 133px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 160px; left: 210px;">
+			            <a href="./blue_files/35_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 133px;"><img src="./blue_files/thumb_35_photo.JPG" style="width: 200px; height: 133px; opacity: 1;"></a>
+			        <span style="width: 200px; height: 133px;"></span></div>
+					<div data-category="Blue Hills" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 160px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/4/36_photo.jpg" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_36_photo.jpg" style="width: 200px; height: 150px; opacity: 1;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Blue Hills" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 303px; left: 210px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/4/37_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_37_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="AGM" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 308px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/3/27_photo.jpg" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_27_photo.jpg" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="AGM" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 320px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/3/28_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_28_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="AGM" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 463px; left: 210px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/3/29_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_29_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="AGM" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 468px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/3/30_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_30_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="AWARDS" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 480px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/5/38_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_38_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="AWARDS" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 623px; left: 210px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/5/39_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_39_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 628px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/47_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_47_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 640px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/48_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_48_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 783px; left: 210px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/49_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_49_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 788px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/50_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_50_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 800px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/51_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_51_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 943px; left: 210px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/52_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_52_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 948px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/53_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_53_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 960px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/54_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_54_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 1103px; left: 210px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/55_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_55_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 150px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 1108px; left: 0px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/56_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 150px;"><img src="./blue_files/thumb_56_photo.JPG" style="width: 200px; height: 150px;"></a>
+			        <span style="width: 200px; height: 150px;"></span></div>
+					<div data-category="Community Connects Launch Event" style="cursor: pointer; width: 200px; height: 266.66666666666663px; opacity: 1; visibility: visible; -webkit-transition: all 0.7s ease; transition: all 0.7s ease; display: block; top: 1120px; left: 420px;">
+			            <a href="http://www.bluehillscentre.ca/app/Uploads/Gallery_photo/7/57_photo.JPG" rel="lightbox[on]" title="" style="width: 200px; height: 266.66666666666663px;"><img src="./blue_files/thumb_57_photo.JPG" style="width: 200px; height: 266.66666666666663px;"></a>
+			        <span style="width: 200px; height: 266.66666666666663px;"></span></div>
+			    </div>
+			<a class="jspArrow jspArrowLeft jspDisabled" data-dirx="-1" data-diry="0" style="height: 43px; display: inline;"></a><a class="jspArrow jspArrowRight" data-dirx="1" data-diry="0" style="height: 43px; display: inline;"></a></div><div id="form-error-dialog" class="dialog">
+			<div class="close ">&nbsp;</div><div class="heading">Please correct the following errors:</div><div class="content"><p></p></div></div>					</div>
+				</div>
+				<div class="clear-float"></div>
+			</div>
+		</div>
+		<div id="scroll-btt">
+			<a href="http://www.bluehillscentre.ca/?t=photo-gallery#" class=""><img src="./blue_files/back-to-top.png" width="34" height="34" alt="back-to-top.png" class=""></a>		</div>
+	</div>
+</div>
+<div id="footer-container" class="block-container">
+	<div id="footer" class="block">
+
+
+		<div class="info-wrap">
+			<img src="./blue_files/footer-logo.png" class="left">
+
+			<div class="left marg-top">
+				<p>402 Bloomington Rd.,<br> Aurora, Ontario L4G 0L9
+				</p>
+			</div>
+
+			<div class="left marg-top">
+				<p>
+					T: (905) 773-4323<br> F: (905) 773-8133
+				</p>
+			</div>
+
+			<div class="left marg-top">
+				<p>
+					TF: 1 (866) 536-7608<br> E: bluehills@bluehillscentre.ca
+				</p>
+			</div>
+
+			<a href="http://www.bluehillscentre.ca/?t=photo-gallery#" class="button right marg-top" style="display: none;"><span>Staff Login</span></a>
+
+			<div class="clear-float"></div>
+		</div>
+
+		<hr size="1">
+
+		<div id="footer-menu">
+			
+					<div id="footer-menu-2" class="menu-container footer-menu-2  home">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=home">Home</a>
+						</div>
+					</div>
+					<div id="footer-menu-50" class="menu-container footer-menu-50  about-us">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=vision-mission-values">About Us</a>
+						</div>
+					</div>
+					<div id="footer-menu-54" class="menu-container footer-menu-54  how-we-help">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=our-process">How We Help</a>
+						</div>
+					</div>
+					<div id="footer-menu-51" class="menu-container footer-menu-51  our-services">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=overview">Our Services</a>
+						</div>
+					</div>
+					<div id="footer-menu-44" class="menu-container footer-menu-44  faqs">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=glossary">FAQs</a>
+						</div>
+					</div>
+					<div id="footer-menu-45" class="menu-container footer-menu-45  new-and-events">
+						<div class="menu1 menutop selected" style="height: 29px;">
+							<a class="menu-link selected" href="http://www.bluehillscentre.ca/?t=news-and-events">New &amp; Events</a>
+						</div>
+					</div>
+					<div id="footer-menu-52" class="menu-container footer-menu-52  resources">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=linnks">Resources</a>
+						</div>
+					</div>
+					<div id="footer-menu-53" class="menu-container footer-menu-53  get-involved">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=careers">Get Involved</a>
+						</div>
+					</div>
+					<div id="footer-menu-43" class="menu-container footer-menu-43  contact-us">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=contact-us">Contact Us</a>
+						</div>
+					</div>
+					<div id="footer-menu-101" class="menu-container footer-menu-101  privacy">
+						<div class="menu1 menutop" style="height: 29px;">
+							<a class="menu-link" href="http://www.bluehillscentre.ca/?t=privacy">Privacy</a>
+						</div>
+					</div>		</div>
+		<div class="clear-both"></div>
+		
+	<div id="copyright">
+		© 2014 Blue Hills Child and Family Centre<br>Designed and developed by
+		<a href="http://www.rcdesign.com/" class="" target="_blank">RC Design</a>
+	</div>
+			<div class="clear-float"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	/* GLOBAL VARS */
+	ACTIVE_SITE = '2';
+	PAGE_ID = '59';
+	PAGE_TAG = 'photo-gallery';
+	PAGE_TITLE = 'Photo Gallery';
+
+	PLUGIN_PATH = 'app/Plugins/';
+	AJAX_PATH = 'app/Views/Default/ajax/';
+
+	MENU_ID = '59';
+	FPARENT_ID = '107';
+	FGRANDPARENT_ID = '';
+
+	$datepickerImage = "app/Views/Default/img/icons/calendar.png";
+
+	VIEW_AJAX = 'app/Views/Default/ajax/';
+	VIEW_CSS = 'app/Views/Default/css/';
+	VIEW_DOCS = 'app/Views/Default/docs/';
+	VIEW_IMGS = 'app/Views/Default/img/';
+	VIEW_JS = 'app/Views/Default/js/';
+
+	CTRL_AJAX = 'app/Controllers/2/photo-gallery/ajax/';
+	CTRL_CSS = 'app/Controllers/2/photo-gallery/css/';
+	CTRL_DOCS = 'CTRL_DOCS';
+	CTRL_IMGS = 'app/Controllers/2/photo-gallery/img/';
+	CTRL_JS = 'app/Controllers/2/photo-gallery/js/';
+
+	ASSET_AJAX = 'app/Assets/ajax/';
+	ASSET_CSS = 'app/Assets/css/';
+	ASSET_DOCS = 'ASSET_DOCS';
+	ASSET_IMGS = 'app/Assets/img/';
+	ASSET_JS = 'app/Assets/js/';
+</script>
+
+<script type="text/javascript" src="./blue_files/saved_resource(2)"></script><script type="text/javascript" src="./blue_files/saved_resource(3)"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+	$("#form-error-dialog").RC_Dialog({"auto_load":false,"close_pos_x":"left","close_pos_y":"top","close_offset":"-20, 20"});
+;;		$("a[href$='t=photo-gallery'], a[href$='t=news']").addClass('selected');
+		$("#menu  .menu1 > a[href$='t=news-and-events'], #footer a[href$='t=news-and-events']").addClass('selected');
+		$(".menu1 .selected").each(function() {
+			$(this).closest('.menu1').addClass('selected');
+		});
+;	});
+</script>
+
+<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-7013831-47']);
+				_gaq.push(['_trackPageview']);
+				
+				(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+
+<div id="lightboxOverlay" style="width: 1583px; height: 2225px; display: block;"></div><div id="lightbox" style="display: block; top: 373.2px; left: 0px;"><div class="lb-outerContainer" style="width: 920px; height: 620px;"><div class="lb-container"><img class="lb-image" src="./blue_files/35_photo.JPG" style="display: inline;"><div class="lb-nav" style="display: block;"><a class="lb-prev" style="display: block;"></a><a class="lb-next" style="display: block;"></a></div><div class="lb-loader" style="display: none;"><a class="lb-cancel"><img src="./blue_files/loading.gif"></a></div></div></div><div class="lb-dataContainer" style="display: block; width: 920px;"><div class="lb-data"><div class="lb-details"><span class="lb-caption" style="display: none;"></span><span class="lb-number">Image 5 of  24</span></div><div class="lb-closeContainer"><a class="lb-close"><img src="./blue_files/close.png"></a></div></div></div></div></body></html>

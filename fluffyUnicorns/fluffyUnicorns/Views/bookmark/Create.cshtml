@@ -33,6 +33,8 @@
         @Html.EditorFor(model => model.browser)
         @*@Html.ValidationMessageFor(model => model.browser, "*Required")*@         
         <br />
+         @Html.LabelFor(model => model.fileData, "Upload Exported HTML Bookmarks")
+        @Html.TextBoxFor(model => model.fileData, new { type = "file"})
         <br />
         <input type="submit" value="Submit" class="button" />
         <a class="helpb" href="@Url.Action("Help", "Home")">Help</a>
@@ -42,14 +44,14 @@
 <div class="large-6 medium-12 small-12 columns">
     <p>Import bookmarks from your browser here.</p>
     @*NEEDS TO BE FIXED*@
-    @using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
+    @*@using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
     {
         @Html.LabelFor(model => model.fileData, "Upload Exported HTML Bookmarks")
         @Html.TextBoxFor(model => model.fileData, new { type = "file"})
+        *@<br />
         <br />
-        <br />
-        <input type="submit" value="Upload" class="button" />
-        <a class="helpb" href="@Url.Action("Help", "Home")">Help</a>
+       @* <input type="submit" value="Upload" class="button" />
+        <a class="helpb" href="@Url.Action("Help", "Home")">Help</a>*@
     }
 </div>
 </div>

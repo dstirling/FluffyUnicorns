@@ -43,27 +43,43 @@ Array userData = File.ReadAllLines(dataFile);
             
         <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>
 
-       
-  <?php 
-    
-    readfile("~/file/chromr.html") ;
-    
-    
-    
-    @*echo   $filepath . "words"; *@ @* '<a href"'.$filepath. '"> Text </a>'*@
-      
-      ?>  
-        
-      
+         <a href="~/files/@item.fileData">Read files?</a>
        @* <a href="~/file/@item.fileData">Read files?</a>*@
-
+        
     </div>
     <br />
 }
 
 </div>
 
-<div class="large-4 medium-12 small-12 columns">
+     
+<script>
+    $(document).ready(function()
+
+    {
+        function loadXMLDoc() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            //else {// code for IE6, IE5
+            //    xmlhttp = new ActiveXObject("~/files/worms.txt");
+            //}
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET", "~/files/worms.txt", true);
+            xmlhttp.send();
+        }
+    }   
+        
+</script>
+      <div id="myDiv"><h2>Read this file .</h2></div>
+<button type="button" onclick="loadXMLDoc()">Show Content</button>  
+
+@*<div class="large-4 medium-12 small-12 columns">
     <div class="side">
         <h4>Categories</h4>
 
@@ -76,7 +92,7 @@ Array userData = File.ReadAllLines(dataFile);
         </ul>
         <input type="search" id="search" placeholder="Search..." />
     </div>
-</div>
+</div>*@
 
 
 

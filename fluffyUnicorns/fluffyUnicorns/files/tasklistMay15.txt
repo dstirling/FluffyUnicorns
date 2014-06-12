@@ -1,0 +1,15 @@
+Task List May 15 - Stacey and Danielle 
+
+Danielle:
+
+-Continue research for file uploads
+-coding an insert that puts filepaths into database
+- research to find a way to read uploaded html files and display contents
+
+Stacey: 
+-Editing design layout
+-Start creating content for other pages (about, descriptions)
+
+Since Tuesday
+- found better sources for creating file upload with MVC
+- started research on how to create a clicker to track which bookmarks are used the most frequently 
