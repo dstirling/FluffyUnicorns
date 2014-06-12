@@ -19,6 +19,7 @@ namespace fluffyUnicorns.Models
 	using System.Linq;
 	using System.Linq.Expressions;
 	using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 	using System;
 	
 	
@@ -434,6 +435,8 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileName", DbType="VarChar(50)")]
+        [Required(ErrorMessage="Please name your bookmark file")]
+        
 		public string fileName
 		{
 			get
@@ -454,7 +457,9 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileData", DbType="VarChar(100)")]
-		public string fileData
+        [Required(ErrorMessage = "Please select a file")]
+       
+        public string fileData
 		{
 			get
 			{
@@ -474,6 +479,8 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fileDescription", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+        [Required(ErrorMessage = "Please enter a description (perhaps important bookmarks you may be looking for)")]
+       
 		public string fileDescription
 		{
 			get
@@ -494,6 +501,8 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_browser", DbType="VarChar(50)")]
+        [Required(ErrorMessage = "Please enter the browser name (ie. Chrome, Firefox, Safari etc)")]
+       
 		public string browser
 		{
 			get
@@ -534,6 +543,8 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_url", DbType="VarChar(150)")]
+        [Required(ErrorMessage = "Please enter url?")]
+       
 		public string url
 		{
 			get
@@ -554,6 +565,8 @@ namespace fluffyUnicorns.Models
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_category", DbType="VarChar(50)")]
+        [Required(ErrorMessage = "Please enter a category apparently")]
+       
 		public string category
 		{
 			get
