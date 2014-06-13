@@ -22,12 +22,12 @@ namespace fluffyUnicorns.Controllers
         {
             return View();
         }
-         [Authorize]
+         //[Authorize]
         public ActionResult BookMarks()
         {
             return View();
         }
-         [Authorize]
+         //[Authorize]
         public ActionResult Stats()
         {
             return View();
@@ -75,7 +75,7 @@ namespace fluffyUnicorns.Controllers
             return View();
         }
 
-        [Authorize]
+        //[Authorize]
         public RedirectResult Logout()
         {
             FormsAuthentication.SignOut();

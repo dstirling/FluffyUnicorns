@@ -35,7 +35,8 @@
         <br />
          @Html.LabelFor(model => model.fileData, "Upload Exported HTML Bookmarks")
         @Html.TextBoxFor(model => model.fileData, new { type = "file"})
-           @Html.ValidationMessageFor(model => model.fileData)
+          
+ @Html.ValidationMessageFor(model => model.fileData)
 
         <br />
         <input type="submit" value="Submit" class="button" />
