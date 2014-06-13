@@ -16,6 +16,13 @@
       <Column Name="message" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.links" Member="links">
+    <Type Name="link">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="lnk_title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lnk_url" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
   <Table Name="dbo.bookmarks" Member="bookmarks">
     <Type Name="bookmark">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -25,7 +32,7 @@
       <Column Name="browser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="userID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="url" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="category" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

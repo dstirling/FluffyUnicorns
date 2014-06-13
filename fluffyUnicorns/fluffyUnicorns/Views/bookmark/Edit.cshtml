@@ -11,7 +11,7 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <p>Below you can edit your existing bookmarks.</p>
+    <p>Below you can edit your existing imported bookmarks.</p>
        
     <div class="editor-label">
         @Html.HiddenFor(model => model.Id)
@@ -26,10 +26,6 @@
         @Html.LabelFor(model => model.fileDescription, "Description")
         @Html.EditorFor(model => model.fileDescription)
              @Html.ValidationMessageFor(model => model.fileDescription)
-
-        @Html.LabelFor(model => model.url, "URL")
-        @Html.EditorFor(model => model.url)
-   @Html.ValidationMessageFor(model => model.url)
 
         @Html.LabelFor(model => model.browser, "Browser")
         @Html.EditorFor(model => model.browser)

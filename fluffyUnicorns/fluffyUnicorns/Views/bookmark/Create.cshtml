@@ -4,11 +4,11 @@
     ViewBag.Title = "Add Your Bookmarks!";
 }
 
-<h2>Create</h2>
+<h2>Import Bookmarks</h2>
 
 <div class="row">
-<div class="large-6 medium-12 small-12 columns">
-    <p>Add a new Bookmark here.</p>
+<div class="large-12 medium-12 small-12 columns">
+    <p>Import your bookmarks from your favourite browser.</p>
     <span style="color:red">@ViewBag.result</span>
         
     @using (Html.BeginForm("Create","bookmark", FormMethod.Post, new {enctype = "multipart/form-data"}))
@@ -19,24 +19,20 @@
         @Html.EditorFor(model => model.fileName)
         @Html.ValidationMessageFor(model => model.fileName)
 
-        @*REDUNDANT?*@
+
         @Html.LabelFor(model => model.fileDescription, "Description")
         @Html.EditorFor(model => model.fileDescription)
         @Html.ValidationMessageFor(model => model.fileDescription)
                
-        @Html.LabelFor(model => model.url, "URL")
-        @Html.EditorFor(model => model.url)
-        @Html.ValidationMessageFor(model =>model.url)
-               
-        @*REDUNDANT?*@
+
         @Html.LabelFor(model => model.browser, "Browser")
         @Html.EditorFor(model => model.browser)
         @Html.ValidationMessageFor(model => model.browser)         
         <br />
-         @Html.LabelFor(model => model.fileData, "Upload Exported HTML Bookmarks")
+        @Html.LabelFor(model => model.fileData, "Upload Exported HTML Bookmarks")
         @Html.TextBoxFor(model => model.fileData, new { type = "file"})
           
- @Html.ValidationMessageFor(model => model.fileData)
+        @Html.ValidationMessageFor(model => model.fileData)
 
         <br />
         <input type="submit" value="Submit" class="button" />

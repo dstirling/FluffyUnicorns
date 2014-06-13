@@ -54,6 +54,22 @@ namespace fluffyUnicorns.Controllers
 
                 return View();
             }
+
+            public ActionResult AddLink()
+            {
+                return View();
+            }
+
+            [HttpPost]
+            public ActionResult AddLink(bookmark link)
+            {
+                bookObj.bookmarks.InsertOnSubmit(link);
+                bookObj.SubmitChanges();
+                ViewBag.result = "Success";
+
+                return View();
+            }
+
              //[Authorize]
             public ActionResult Edit(int Id)
             {
@@ -78,13 +94,43 @@ namespace fluffyUnicorns.Controllers
                     {
                         return View(book);
                     }
-
                 }
                 else
                 {
                     return View(book);
                 }
             }
+
+            public ActionResult EditLink(int Id)
+            {
+                var link = bookObj.bookmarks.Single(x => x.Id == Id);
+                return View(link);
+            }
+
+            [HttpPost]
+            public ActionResult EditLink(int Id, bookmark link)
+            {
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        var editlink = bookObj.bookmarks.Single(x => x.Id == Id);
+                        UpdateModel(link);
+                        bookObj.SubmitChanges();
+                        ViewBag.result = "Success";
+                        return RedirectToAction("Index");
+                    }
+                    catch
+                    {
+                        return View(link);
+                    }
+                }
+                else
+                {
+                    return View(link);
+                }
+            }
+
              //[Authorize]
             public ActionResult Delete(int Id)
             {
