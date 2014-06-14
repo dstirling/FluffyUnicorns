@@ -5,10 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.IO;
 using System.Text;
-
-
-using System.IO; //needed to use memory stream
-
 using fluffyUnicorns.Models;
 
 
@@ -85,7 +81,7 @@ namespace fluffyUnicorns.Controllers
                     try
                     {
                         var bookmark = bookObj.bookmarks.Single(x => x.Id == Id);
-                        UpdateModel(book);
+                        UpdateModel(bookmark);
                         bookObj.SubmitChanges();
                         ViewBag.result = "Success";
                         return RedirectToAction("Index");
@@ -115,7 +111,7 @@ namespace fluffyUnicorns.Controllers
                     try
                     {
                         var editlink = bookObj.bookmarks.Single(x => x.Id == Id);
-                        UpdateModel(link);
+                        UpdateModel(editlink);
                         bookObj.SubmitChanges();
                         ViewBag.result = "Success";
                         return RedirectToAction("Index");
