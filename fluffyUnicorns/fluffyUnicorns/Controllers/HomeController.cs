@@ -32,7 +32,7 @@ namespace fluffyUnicorns.Controllers
         {
             return View();
         }
-         [Authorize]
+
          public ActionResult Contact()
          {
              return View();
@@ -59,23 +59,23 @@ namespace fluffyUnicorns.Controllers
                  return View();
              }
          }
-         [Authorize]
+     
         public ActionResult Privacy()
         {
             return View();
         }
-         [Authorize]
+  
         public ActionResult Terms()
         {
             return View();
         }
-         [Authorize]
+  
         public ActionResult Help()
         {
             return View();
         }
 
-        [Authorize]
+        
         public RedirectResult Logout()
         {
             FormsAuthentication.SignOut();
