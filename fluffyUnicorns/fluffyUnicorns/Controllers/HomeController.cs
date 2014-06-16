@@ -22,17 +22,17 @@ namespace fluffyUnicorns.Controllers
         {
             return View();
         }
-         //[Authorize]
+         [Authorize]
         public ActionResult BookMarks()
         {
             return View();
         }
-         //[Authorize]
+         [Authorize]
         public ActionResult Stats()
         {
             return View();
         }
-         //[Authorize]
+         [Authorize]
          public ActionResult Contact()
          {
              return View();
@@ -59,23 +59,23 @@ namespace fluffyUnicorns.Controllers
                  return View();
              }
          }
-         //[Authorize]
+         [Authorize]
         public ActionResult Privacy()
         {
             return View();
         }
-         //[Authorize]
+         [Authorize]
         public ActionResult Terms()
         {
             return View();
         }
-         //[Authorize]
+         [Authorize]
         public ActionResult Help()
         {
             return View();
         }
 
-        //[Authorize]
+        [Authorize]
         public RedirectResult Logout()
         {
             FormsAuthentication.SignOut();
