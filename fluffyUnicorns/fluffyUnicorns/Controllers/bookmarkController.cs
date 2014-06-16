@@ -18,6 +18,7 @@ namespace fluffyUnicorns.Controllers
 
             //public HttpPostedFileBase File { get; set; }
             // GET: /bookmark/
+            
             //[Authorize]
             public ActionResult Index()
             {
@@ -27,12 +28,14 @@ namespace fluffyUnicorns.Controllers
 
                 return View(marks);//must pass parameter to view in order to display information
             }
-             //[Authorize]
+            
+            //[Authorize]
             public ActionResult Create()
             {
                 return View();
             }
-
+            
+            //[Authorize]
             [HttpPost]
             public ActionResult Create(bookmark upload, HttpPostedFileBase fileData)
             {
@@ -50,7 +53,8 @@ namespace fluffyUnicorns.Controllers
 
                 return View();
             }
-
+            
+            [Authorize]
             public ActionResult AddLink()
             {
                 return View();
@@ -66,13 +70,14 @@ namespace fluffyUnicorns.Controllers
                 return View();
             }
 
-             //[Authorize]
+            [Authorize]
             public ActionResult Edit(int Id)
             {
                 var book = bookObj.bookmarks.Single(x => x.Id == Id);
                 return View(book);
             }
-
+            
+            [Authorize]
             [HttpPost]
             public ActionResult Edit(int Id, bookmark book)
             {
@@ -102,7 +107,8 @@ namespace fluffyUnicorns.Controllers
                 var link = bookObj.bookmarks.Single(x => x.Id == Id);
                 return View(link);
             }
-
+            
+            [Authorize]
             [HttpPost]
             public ActionResult EditLink(int Id, bookmark link)
             {
@@ -127,7 +133,7 @@ namespace fluffyUnicorns.Controllers
                 }
             }
 
-             //[Authorize]
+            [Authorize]
             public ActionResult Delete(int Id)
             {
                 var bmark = bookObj.bookmarks.Single(x => x.Id == Id);
@@ -135,6 +141,7 @@ namespace fluffyUnicorns.Controllers
 
             }
 
+            [Authorize]
             [HttpPost]
             public ActionResult Delete(int Id, bookmark bmark)
             {
