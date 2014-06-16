@@ -1,0 +1,36 @@
+﻿@model fluffyUnicorns.Models.bookmark
+
+@{
+    ViewBag.Title = "EditLink";
+}
+
+<h2>Edit Link</h2>
+
+@using (Html.BeginForm()) {
+   
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <p>Below you can edit your existing bookmark links.</p>
+       
+    @Html.HiddenFor(model => model.Id)
+        
+    @Html.LabelFor(model => model.title, "Title")
+    @Html.EditorFor(model => model.title)
+    @Html.ValidationMessageFor(model => model.title)
+
+    @Html.LabelFor(model => model.url, "URL")
+    @Html.EditorFor(model => model.url)
+    @Html.ValidationMessageFor(model => model.url)
+    <br />    
+    <br />
+    <input type="submit" value="Save" class="button" />
+}
+
+    @Html.ActionLink("Back to List", "Index")
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

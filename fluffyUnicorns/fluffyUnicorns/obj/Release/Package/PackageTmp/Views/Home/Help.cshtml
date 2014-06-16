@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Help";
+}
+<div class="help">
+    <h2>Help</h2>
+    
+    <h3>Popular Help Topics</h3>
+    @* Link to anchor tags in help page *@
+        <ul class="bxslider">
+            <li><a href="#title4"><img src="~/Images/help1.png" /></a></li>
+            <li><a href="#title2"><img src="~/Images/help2.png" /></a></li>
+            <li><a href="#title7"><img src="~/Images/help3.png" /></a></li>
+        </ul>
+
+    <script>
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                auto: true
+            });
+
+            $('.info').hide();
+            $('.title').on('click', function () {
+                var infoID = $(this).attr('data-infoID');
+                $('#' + infoID).slideToggle();
+            });
+
+        });
+    </script>
+
+    <h3>Help Topics</h3>
+    <p id="instr">Click a topic below to view more information.</p>
+
+    <a id="title1"><h4 class="title" data-infoID="info1">Adding A Link</h4></a>
+    <p class="info" id="info1">
+        Adding new links is easy! Simply go to @Html.ActionLink("My Cloud Markers", "Index", "bookmark") and click the 'Add a Link' button on the right side. This will prompt you to enter a Title for your new link and the URL. Remember to prefix your URL with 'http://www.' Click 'Submit' and your new link will be waiting for you!
+    </p>
+
+    <a id="title2"><h4 class="title" data-infoID="info2">Importing Bookmarks</h4></a>
+    <p class="info" id="info2">
+        Cloud Marker allows you to import your bookmarks from your browsers for easy access from anywhere!<br /><br />
+        <em>Google Chrome:</em> &nbsp Click the menu button in the top right corner (three horizontal lines). From there, hover over 'Bookmarks' and click 'Bookmark Manager' (also reachable by hitting Ctrl+Shift+O). Once there, click 'Organise' and select 'Export bookmarks to HTML file...' Change the name of the file if you wish and save it in a place where you can easily find it (you can delete this file after you upload it to Cloud Marker).<br /><br />
+        <em>Firefox:</em> &nbsp From the Firefox start page, click 'Bookmarks' at the bottom of the page. When the window opens, click 'Import and Backup' and select 'Export Bookmarks to HTML...'. Change the name of the file if you wish and save it in a place where you can easily find it (you can delete this file after you upload it to Cloud Marker).<br /><br />
+        <em>Internet Explorer 11:</em> &nbsp Click the star at the top right of the screen. From here, click the downward arrow beside 'Add to Favourites' and select 'Import and Export'. In this new window, select 'Export to a file' and click next. Select the box for 'Favourites', and click next. If you have multiple bookmarks folders, select which one you wish to export. Click next. Change the name of the file if you wish and save it in a place where you can easily find it (you can delete this file after you upload it to Cloud Marker). Click 'Export'.<br /><br />
+        <strong>Next,</strong> &nbsp Navigate to @Html.ActionLink("My Cloud Markers", "Index", "bookmark") and click the 'Import Bookmarks' button on the left. This will prompt you to give your imported bookmarks a title, description, and specify which browser they are from. Below this, you will upload the HTML file you just created from your browser. You can import bookmarks from an unlimited number of browsers on Cloud Marker!
+    </p>
+
+    <a id="title3"><h4 class="title" data-infoID="info3">Editing Bookmarks</h4></a>
+    <p class="info" id="info3">
+        To edit your imported bookmarks or added links, click 'Edit' beside the one you wish you alter on the @Html.ActionLink("My Cloud Markers", "Index", "bookmark") page. This will prompt you to update the information you wish to change. Click the 'Save' button, and your changes will be in place when you return to the previous page. 
+    </p>
+
+     <a id="title4"><h4 class="title" data-infoID="info4">Deleting Bookmarks</h4></a>
+    <p class="info" id="info4">
+        To delete an added link or imported list, simply click the orange 'X' button beside the link you wish you remove. Simple as that!
+    </p>
+
+    <a id="title5"><h4 class="title" data-infoID="info5">Categorizing Bookmarks</h4></a>
+    <p class="info" id="info5">
+        Coming Soon
+    </p>
+
+    <a id="title6"><h4 class="title" data-infoID="info6">Viewing Statistics</h4></a>
+    <p class="info" id="info6">
+        Coming Soon
+    </p>
+
+    <a id="title7"><h4 class="title" data-infoID="info7">Creating an Account</h4></a>
+    <p class="info" id="info7">
+        You can create an account by clicking the 'Sign Up Now!' button on the @Html.ActionLink("front page", "Index", "Home"). It will ask you to select a user name and password. Passwords must contain at least one number and one special character (~!#$ etc.) Click 'Register'. This will redirect you back to the homepage. Now you may click 'Login' below the 'Sign Up Now!' button. Once there, enter your new user name and password, and you're in!
+    </p>
+
+    <a id="title8"><h4 class="title" data-infoID="info8">Deleting an Account</h4></a>
+    <p class="info" id="info8">
+        To delete your account, contact the Cloud Marker team at <a href="mailto:fluffyunicorns@cloudmarker.com">fluffyunicorns@cloudmarker.com</a>
+    </p>
+
+    
+</div>

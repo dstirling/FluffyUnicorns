@@ -1,0 +1,38 @@
+﻿@model fluffyUnicorns.Models.contact
+
+@{
+    ViewBag.Title = "Feedback";
+}
+
+<div class="feedback">
+
+    <h2>@ViewBag.Title</h2>
+
+    <p>Know of a way we could improve? Find a bug? Think we're totally awesome? We want to know!</p>
+    <p>Drop us a line using the form below, or contact us directly at: <a href="mailto:fluffyunicorns@cloudmarker.ca">fluffyunicorns@cloudmarker.ca</a></p>
+    <br />
+    
+    @using (Html.BeginForm()) { 
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        @Html.LabelFor(model => model.name, "Name")
+        @Html.EditorFor(model => model.name)
+        @*@Html.ValidationMessageFor(model => model.name, "*Required")*@
+
+        @Html.LabelFor(model => model.email, "Email")
+        @Html.EditorFor(model => model.email)
+        @*@Html.ValidationMessageFor(model => model.email, "*Required")*@
+
+        @Html.LabelFor(model => model.message, "Message")
+        @Html.EditorFor(model => model.message)
+        @*@Html.ValidationMessageFor(model => model.message, "*Required")*@
+        <br />
+        <br />
+        <input type="submit" value="Submit" class="button" />
+    }
+
+    @section scripts {
+        @Scripts.Render("~/bundles/jqueryval")   
+    }
+</div>

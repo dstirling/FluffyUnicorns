@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Hooray, you're here!";
+}          
+   
+<div class="home">
+    <h1>@ViewBag.Title</h1>
+    <br />
+    <h4>Welcome to Cloud Marker, your new best friend.  On Cloud Marker, you can upload your bookmarks from your favourite browser so you can access them in a snap from any device, anywhere, anytime!</h4>
+    <h4>Once your bookmarks are uploaded to your account, you can categorize them, edit them, share them with friends, and view cool stats about the things you mark!</h4>
+    <h4>Just create an account, and and you can start making your mark in the sky today.</h4>
+    <br />
+    <h3>It's that simple!</h3>
+    <br />
+    <br />
+    @Html.ActionLink("Sign Up Now!", "Register", "Account", null, new { @class = "register" })
+    <br />
+    @Html.ActionLink("Login", "Login", "Account", null, new { @class = "login" })
+
+</div>
