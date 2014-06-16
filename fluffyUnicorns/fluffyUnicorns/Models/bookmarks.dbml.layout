@@ -2,29 +2,89 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="bookmarks">
   <DataContextMoniker Name="/bookmarksDataContext" />
   <nestedChildShapes>
-    <classShape Id="6c4a5f20-690e-4bc5-b904-56f1b2cbd33c" absoluteBounds="0.5, 0.5, 2, 1.5785953776041666">
-      <DataClassMoniker Name="/bookmarksDataContext/login" />
-      <nestedChildShapes>
-        <elementListCompartment Id="76b21cf1-a42e-4f5e-b043-85abbcdb0934" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="8ffc8ba6-b14a-4837-a800-8c8b36b38301" absoluteBounds="2.75, 0.5, 2, 1.5785953776041666">
       <DataClassMoniker Name="/bookmarksDataContext/contact" />
       <nestedChildShapes>
         <elementListCompartment Id="34f3a04c-6797-415c-819d-cc2893fccda7" absoluteBounds="2.765, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="7756350a-8a75-4e2e-a9c2-052b9f548f88" absoluteBounds="2.75, 2.25, 2, 1.3862939453125">
-      <DataClassMoniker Name="/bookmarksDataContext/link" />
-      <nestedChildShapes>
-        <elementListCompartment Id="935cfa6d-99ff-4704-9d13-52eae76e79fe" absoluteBounds="2.765, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="ae48ff07-2bcd-4015-9ac3-280b059ac1da" absoluteBounds="0.5, 2.25, 2, 2.3478011067708335">
+    <classShape Id="ae48ff07-2bcd-4015-9ac3-280b059ac1da" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
       <DataClassMoniker Name="/bookmarksDataContext/bookmark" />
       <nestedChildShapes>
-        <elementListCompartment Id="6b120aa3-ad2a-4563-9722-f65efdade315" absoluteBounds="0.51500000000000012, 2.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6b120aa3-ad2a-4563-9722-f65efdade315" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="99f7e36f-1bfa-4ef1-997c-65fb84e165e8" absoluteBounds="5, 0.5, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/bookmarksDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="798fdb1f-8f78-44cb-9645-ed0546993060" absoluteBounds="5.015, 0.96, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e068be38-534f-4aa0-87ef-670b1f8d053a" absoluteBounds="2.75, 2.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/bookmarksDataContext/aspnet_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ef05041-9e1b-4a38-b7d1-6584f258c6f0" absoluteBounds="2.765, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4e343f0-b427-4745-b14d-36167730b5e7" absoluteBounds="0.5, 3, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/bookmarksDataContext/aspnet_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3984f14-e53f-442b-b42f-44a9e64122af" absoluteBounds="0.515, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 3.32774983723958); (5 : 3.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bookmarksDataContext/aspnet_User/aspnet_User_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="e068be38-534f-4aa0-87ef-670b1f8d053a" />
+        <classShapeMoniker Id="99f7e36f-1bfa-4ef1-997c-65fb84e165e8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 4.52329752604167); (5 : 4.52329752604167)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bookmarksDataContext/aspnet_Application/aspnet_Application_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="f4e343f0-b427-4745-b14d-36167730b5e7" />
+        <classShapeMoniker Id="99f7e36f-1bfa-4ef1-997c-65fb84e165e8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.70274983723958); (2.75 : 3.70274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bookmarksDataContext/aspnet_Application/aspnet_Application_aspnet_User" />
+      <nodes>
+        <classShapeMoniker Id="f4e343f0-b427-4745-b14d-36167730b5e7" />
+        <classShapeMoniker Id="e068be38-534f-4aa0-87ef-670b1f8d053a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="49a99d28-537d-4f4a-ae85-0da52972e018" absoluteBounds="0.5, 4.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/bookmarksDataContext/aspnet_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="450acaab-9bf5-42d6-af80-f70ec50e479a" absoluteBounds="0.51500000000000012, 5.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11b695fa-e5e4-4a56-ad86-e00e384913a7" absoluteBounds="2.75, 4.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/bookmarksDataContext/aspnet_UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2c47105-bc0b-4ad6-a010-725fafdbb452" absoluteBounds="2.7649999999999997, 5.0850000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 4.57859537760417); (1.5 : 4.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bookmarksDataContext/aspnet_Application/aspnet_Application_aspnet_Role" />
+      <nodes>
+        <classShapeMoniker Id="f4e343f0-b427-4745-b14d-36167730b5e7" />
+        <classShapeMoniker Id="49a99d28-537d-4f4a-ae85-0da52972e018" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 5.28449625651042); (2.75 : 5.28449625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bookmarksDataContext/aspnet_Role/aspnet_Role_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="49a99d28-537d-4f4a-ae85-0da52972e018" />
+        <classShapeMoniker Id="11b695fa-e5e4-4a56-ad86-e00e384913a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 4.40549967447917); (3.75 : 4.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/bookmarksDataContext/aspnet_User/aspnet_User_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="e068be38-534f-4aa0-87ef-670b1f8d053a" />
+        <classShapeMoniker Id="11b695fa-e5e4-4a56-ad86-e00e384913a7" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
