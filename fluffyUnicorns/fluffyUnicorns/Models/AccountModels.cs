@@ -12,7 +12,7 @@ namespace fluffyUnicorns.Models
     public class UsersContext : DbContext
     {
         public UsersContext()
-            : base("fluffyUnicornsConnectionString")
+            : base("DefaultConnection")
         {
         }
 

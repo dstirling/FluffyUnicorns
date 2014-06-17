@@ -12,25 +12,6 @@
         <br /><br />
     </div>
 
-@*    <label for="sort">Sort bookmarks by: &nbsp;&nbsp;
-    <select id="sort">
-        <option>Date</option>
-        <option>Name</option>
-        <option>Category</option>
-    </select>
-    </label>*@
-  
-@*    @{ 
-        var dataFile = Server.MapPath("~/files/chromr.html");
-Array userData = File.ReadAllLines(dataFile);
-}
-
-    @foreach (string dataLine in userData) 
-{
-  foreach (string dataItem in dataLine.Split(',')) 
-  {@dataItem <text>&nbsp;</text>}
-  <br />
-}*@
 <br />
 @foreach (var item in Model)
 {
@@ -42,12 +23,7 @@ Array userData = File.ReadAllLines(dataFile);
 
         <a href="~/files/@item.fileData">@Html.DisplayFor(ModelItem => item.fileName)</a>
             
-        <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>
-
-        @*wrapped this around filename *@
-        @*<a href="~/files/@item.fileData">Read files?</a>*@
-
-        
+        <span class="edit">@Html.ActionLink("Edit","Edit", new {Id = item.Id})</span>       
     </div>
     }
 }
@@ -55,18 +31,12 @@ Array userData = File.ReadAllLines(dataFile);
 </div>
 
      
-
-
-
-
 <div class="large-6 medium-12 small-12 columns lk">
     <h3>Links</h3>
     <div class="addedit">
         @Html.ActionLink("Add a Link", "AddLink")
         <br /><br />
     </div>
-
-
 
     @foreach (var item in Model)
     {
@@ -88,49 +58,4 @@ Array userData = File.ReadAllLines(dataFile);
     
     
     
-    @*<div class="side">
-        <h4>Categories</h4>
-
-        <ul>
-            <li><a href="#">Arts (3)</a></li>
-            <li><a href="#">Food (13)</a></li>
-            <li><a href="#">Movies (2)</a></li>
-            <li><a href="#">Science (7)</a></li>
-            <li><a href="#">Weather (5)</a></li>
-        </ul>
-        <input type="search" id="search" placeholder="Search..." />
-    </div>*@
-</div>
-
-
-
-
-
-
-
-
-<script>
-    $(document).ready(function()
-
-    {
-        function loadXMLDoc() {
-            var xmlhttp;
-            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-            }
-            //else {// code for IE6, IE5
-            //    xmlhttp = new ActiveXObject("~/files/worms.txt");
-            //}
-            xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-                }
-            }
-            xmlhttp.open("GET", "~/files/worms.txt", true);
-            xmlhttp.send();
-        }
-    }   
-        )
-</script>
-      <div id="myDiv"><h2>Read this file .</h2></div>
-<button type="button" onclick="loadXMLDoc()">Show Content</button>  
+  

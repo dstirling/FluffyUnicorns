@@ -19,7 +19,7 @@ namespace fluffyUnicorns.Controllers
             //public HttpPostedFileBase File { get; set; }
             // GET: /bookmark/
             
-            //[Authorize]
+            [Authorize]
             public ActionResult Index()
             {
 
@@ -29,13 +29,13 @@ namespace fluffyUnicorns.Controllers
                 return View(marks);//must pass parameter to view in order to display information
             }
             
-            //[Authorize]
+            [Authorize]
             public ActionResult Create()
             {
                 return View();
             }
             
-            //[Authorize]
+            [Authorize]
             [HttpPost]
             public ActionResult Create(bookmark upload, HttpPostedFileBase fileData)
             {
